@@ -7,8 +7,8 @@
                     <img class="img-responsive imgSlide" src="images/Ark.jpg" alt="Ark Combat Evolved">
                     <div class="carousel-caption">
                         <h2 class="titreSlider">Ark Combat Evolved</h2>
-                        <button class="btn-info bouttonSlider" type="submit">En Savoir Plus</button>
                         <p> Un jeu de survie immersif où votre instinct sera mise à rude épreuve</p>
+                        <button class="btn-info bouttonSlider" type="submit">En Savoir Plus</button>
                     </div>
                 </div>
                 <div class="item">

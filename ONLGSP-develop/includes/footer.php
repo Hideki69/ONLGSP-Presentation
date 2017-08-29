@@ -228,7 +228,7 @@
 
             <div class="col-md-3 col-xs-12 mentions">
                 <!-- Button trigger modal -->
-                <a href="#" data-toggle="modal" data-target="#myModal1">Mentions Légales</a>
+                <a class="col-md-offset-6" href="#" data-toggle="modal" data-target="#myModal1">Mentions Légales</a>
 
                 <!-- Modal Mention légale-->
                 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -312,8 +312,3 @@
         </div>
     </div>
 </footer>
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/script.js"></script>
-</body>
-</html>

@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="row">
                 <div class="bloc">
@@ -12,7 +12,7 @@
                             <span class="icon-bar"></span>
                         </button>
 
-                        <a class="navbar-brand col-xs-8" href="index.php"><img class="logo img-responsive" src="images/Logo.png" alt="Logo ONLGSP"></a>
+                        <a class="navbar-brand col-xs-8" href="index.php"><img class="col-md-offset-4 logo img-responsive" src="images/Logo.png" alt="Logo ONLGSP"></a>
                     </div>
 
 
@@ -20,20 +20,13 @@
                     <div class="collapse navbar-collapse" id="menu">
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="index.php">Accueil <span class="sr-only">(current)</span></a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Nos offres<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Forfait Gratuit</a></li>
-                                    <li><a href="#">Forfait Annuel</a></li>
-                                    <li><a href="#">Forfait a vie</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="#ancreForfait" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Forfait</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">A propos<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Steam</a></li>
-                                    <li><a href="#">Facebook</a></li>
-                                    <li><a href="#">Twitter</a></li>
+                                    <li><a href="http://steamcommunity.com/id/OpenNoobLinuxGameServeurProvider">Steam</a></li>
+                                    <li><a href="https://www.facebook.com/Open-Noob-Game-Serveur-Provider-529004257451467/?fref=ts">Facebook</a></li>
+                                    <li><a href="https://twitter.com/OpenNoobGame">Twitter</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Forum</a></li>

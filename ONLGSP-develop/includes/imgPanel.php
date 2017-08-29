@@ -1,9 +1,7 @@
-<div class="img-panel col-md-10">
+<div class="img-panel text-center col-md-10 col-md-offset-1">
     <div class="row">
-        <h2 class="col-md-offset-3 text-center"> Profitez de notre Panel d'administration</h2>
-        <div class="col-md-offset-4">
-            <img class="img-responsive" src="images/panel.png">
-        </div>
+        <h2> Profitez de notre Panel d'administration</h2>
+        <img class="col-md-offset-2 img-responsive" src="images/panel.png">
     </div>
 </div>
 </main>

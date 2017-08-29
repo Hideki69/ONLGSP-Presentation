@@ -5,3 +5,4 @@
 <?php include'includes/forfait.php' ?>
 <?php include'includes/imgPanel.php' ?>
 <?php include'includes/footer.php' ?>
+<?php include'includes/basPage.php' ?>

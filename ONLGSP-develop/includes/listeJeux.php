@@ -11,21 +11,24 @@ $listeJeux = $dbh->query($rqlisteJeux)->fetchAll();
 
 ?>
 
-<div class="listeJeux col-md-12">
+<div class="listeJeux text-center col-md-10 col-md-offset-1">
     <div class="row">
-        <div class="col-md-offset-6 col-xs-offset-5">
-            <i class="fa fa-steam-square" aria-hidden="true"></i>
-        </div>
+        <i class="fa fa-steam-square" aria-hidden="true"></i>
     </div>
-    <h2 class="text-center"> Liste des serveurs disponibles </h2>
-    <p class="text-center"> Profitez de serveurs performant pour vos jeux !</p>
+    <h2> Liste des serveurs disponibles </h2>
+    <p> Profitez de serveurs performant pour vos jeux !</p>
 </div>
-<div class="col-md-offset-1 col-md-10">
+<div class="col-md-10 col-md-offset-1">
     <div class="row">
         <?php
         foreach($listeJeux as $listeJeu):
         {
-            echo'<div class="grid"><div class="grid-item"><div class="col-md-3 col-sm-4"><fieldset><a href=#><img src="images/miniature/'.$listeJeu['image'].'.jpg" class="img-responsive imgMarge"></a><legend class="titreJeu text-center">'.$listeJeu['titre'].'</legend></figure></div></div></div>';
+            echo'<div class="grid">
+            <div class="grid-item">
+            <div class="zindex col-md-2 col-sm-4">
+            <a href="#">
+            <figure><img src="images/miniature/'.$listeJeu['image'].'.jpg" class="img-responsive imgMarge">
+            <figcaption class="titreJeu"><p class="text-center">'.$listeJeu['titre'].'</p></figcaption></figure></a></div></div></div>';
         }
 
         ?>
