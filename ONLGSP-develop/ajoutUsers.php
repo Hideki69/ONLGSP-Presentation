@@ -15,7 +15,7 @@ if(!filter_var($safe['email'], FILTER_VALIDATE_EMAIL))
 }
 
 //controle mot de passe
-$mdp = $safe['passwd'];
+$mdp = $safe['password'];
 $longueur = strlen($mdp); //longueur du mot de passe
 if($longueur < 8)
 {
@@ -49,6 +49,7 @@ $exists = $stmtVerif->fetchColumn();
 //si > 0 erreur
 if($exists > 0){
     $errors[] = "L'adresse mail existe déjà";
+    echo '<meta http-equiv="refresh" content="3 ; url=inscription.php">';
 }
 // /////////////////////////////////////////////////////////
 
@@ -65,6 +66,7 @@ $exists = $stmtVerif->fetchColumn();
 //si > 0 erreur
 if($exists > 0){
     $errors[] = "Le pseudo existe déjà";
+    echo '<meta http-equiv="refresh" content="3 ; url=inscription.php">';
 }
 // //////////////////////////////////////////////
 // si il y a pas d'erreur
@@ -74,18 +76,24 @@ if(count($errors) == 0)
     $hash = password_hash($mdp, PASSWORD_DEFAULT);
 
     //ajout dans la base de données
-    $req = "INSERT INTO users(email, passwd, actif, pseudo)	VALUES(:email,:passwd, :actif, :pseudo)";
+    $req = "INSERT INTO users(email, password, actif, pseudo, role)
+                	VALUES(:email,:password, :actif, :pseudo, :role)";
 
     //préparation
     $stmt = $dbh->prepare($req);
 
     //paramètres
-    $params = array(':email' => $safe['email'],	':passwd' => $hash,	':actif' => 1, ':pseudo' => $safe['pseudo']);
+    $params = array(':email' => $safe['email'],
+                    ':password' => $hash,
+                    ':actif' => 1,
+                    ':pseudo' => $safe['pseudo'],
+                    ':role' => $safe['role']);
     //exécution
     if($stmt->execute($params))
     {
         //Message retour
         echo '<div class="alert alert-success">	Merci pour votre Inscription </div>';
+        echo '<meta http-equiv="refresh" content="3 ; url=index.php">';
     }
     else echo '<div class="alert alert-danger">	 Erreur de requête </div>';
 }
@@ -101,5 +109,5 @@ else
     echo '<div class="alert alert-danger">Des erreurs sont à corriger:	<ul>'.$liste.'</ul></div>';
 }
 //pied de page
-include 'includes/footer.php';
+include 'includes/basPage.php';
 ?>

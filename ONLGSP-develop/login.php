@@ -20,23 +20,26 @@ $exists = $stmtVerif->fetchColumn(); //une seule info
 if($exists == 1)
 {
 	//récupération du mot de passe
-	$rqClient = "SELECT idUsers, nom, prenom,
-						   passwd
+	$rqClient = "SELECT idUsers, pseudo, role,
+						   password
 						   FROM users
 						   WHERE email = :email";
+
 	$stmtClient = $dbh->prepare($rqClient); //préparation
 	$stmtClient->execute($paramVerif); //exécution
+
 	//récupération des infos client
 	$client = $stmtClient->fetch();
+
 	//comparaison du mdp du formulaire et de la bdd
-	if(password_verify($safe['passwd'],
-										 $client['passwd']))
+	if(password_verify($safe['password'],
+										 $client['password']))
 	{
 		//client trouvé enregistrement en session
 		$_SESSION['auth'] = 'ok';
-		$_SESSION['nom'] = $client['nom'];
+		$_SESSION['pseudo'] = $client['pseudo'];
 		$_SESSION['id'] = $client['idUsers'];
-		$_SESSION['prenom'] = $client['prenom'];
+		$_SESSION['role'] = $client['role'];
 		//sécurité!!!
 		session_regenerate_id();
 

@@ -3,10 +3,10 @@
         <div class="thumbnail">
             <div class="caption">
                 <h3>Forfait Gratuit</h3>
-                <p > Profitez de nos services gratuit : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et turpis id odio auctor tincidunt. Nunc nec blandit turpis. Etiam nec nibh et tellus iaculis auctor. In hac habitasse platea dictumst. Ut tortor lacus, lobortis in tellus non, semper imperdiet eros. Donec lobortis venenatis velit id suscipit. </p>
+                <p style="color: aliceblue"> Profitez de nos services gratuit : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et turpis id odio auctor tincidunt. Nunc nec blandit turpis. Etiam nec nibh et tellus iaculis auctor. In hac habitasse platea dictumst. Ut tortor lacus, lobortis in tellus non, semper imperdiet eros. Donec lobortis venenatis velit id suscipit. </p>
             </div>
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                En Savoir plus 
+            <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                En Savoir plus
             </button>
         </div>
         <div class="collapse" id="collapseExample">

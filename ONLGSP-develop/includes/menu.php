@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="row">
                 <div class="bloc">
@@ -15,45 +15,67 @@
                         <a class="navbar-brand col-xs-8" href="index.php"><img class="col-md-offset-4 logo img-responsive" src="images/Logo.png" alt="Logo ONLGSP"></a>
                     </div>
 
+                        <!-- menu si connecté et Admin -->
+                      <?php if(isset($_SESSION['auth'])  && ($_SESSION['role'])): ?>
 
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="menu">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="index.php">Accueil <span class="sr-only">(current)</span></a></li>
-                            <li><a href="#ancreForfait" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Forfait</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">A propos<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="http://steamcommunity.com/id/OpenNoobLinuxGameServeurProvider">Steam</a></li>
-                                    <li><a href="https://www.facebook.com/Open-Noob-Game-Serveur-Provider-529004257451467/?fref=ts">Facebook</a></li>
-                                    <li><a href="https://twitter.com/OpenNoobGame">Twitter</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Forum</a></li>
-                        </ul>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="menu">
+                            <ul class="nav navbar-nav">
+                              <li><a  href="#" id="utilisateur">Liste utilisateur</a></li>
 
-                        <!-- <form class="navbar-form navbar-left">
-<div class="form-group">
-<input type="text" class="form-control" placeholder="Search">
-</div>
-<button type="submit" class="btn btn-default">Submit</button>
-</form> -->
-
-
-
-                        <?php if(isset($_SESSION['auth'])): ?>
-                        <!-- menu si connecté -->
+                              <li><a href="forum.php" id="forumAdmin">Forum</a></li>
+                            </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="#"><i class="glyphicon glyphicon-user"></i>
-                                <?= $_SESSION['prenom'].' '.$_SESSION['nom']; ?></a>
+                                <?= $_SESSION['pseudo']; ?></a>
+                            </li>
+                            <li><a href="deconnexion.php">
+                                <i class="glyphicon glyphicon-off"></i>Déconnecter</a></li>
+                        </ul>
+
+                        <!-- menu si connecté -->
+                        <?php elseif(isset($_SESSION['auth'])): ?>
+                          <!-- Collect the nav links, forms, and other content for toggling -->
+                          <div class="collapse navbar-collapse" id="menu">
+                              <ul class="nav navbar-nav">
+                                  <li><a href="index.php">Accueil <span class="sr-only">(current)</span></a></li>
+                                  <li><a href="#ancreForfait" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Forfait</a></li>
+                                  <li class="dropdown">
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">A propos<span class="caret"></span></a>
+                                      <ul class="dropdown-menu">
+                                          <li><a href="http://steamcommunity.com/id/OpenNoobLinuxGameServeurProvider" target="_blank" >Steam</a></li>
+                                          <li><a href="https://www.facebook.com/Open-Noob-Game-Serveur-Provider-529004257451467/?fref=ts" target="_blank" >Facebook</a></li>
+                                          <li><a href="https://twitter.com/OpenNoobGame" target="_blank" >Twitter</a></li>
+                                      </ul>
+                                  </li>
+                                  <li><a href="forum.php">Forum</a></li>
+                              </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#"><i class="glyphicon glyphicon-user"></i>
+                                <?= $_SESSION['pseudo']; ?></a>
                             </li>
 
                             <li><a href="deconnexion.php">
-                                <i class="glyphicon glyphicon-off"></i> Déconnecter</a></li>
+                                <i class="glyphicon glyphicon-off"></i>Déconnecter</a></li>
                         </ul>
-                        <?php else: ?>
 
                         <!-- menu si non connecté -->
+                        <?php else: ?>
+                          <!-- Collect the nav links, forms, and other content for toggling -->
+                          <div class="collapse navbar-collapse" id="menu">
+                              <ul class="nav navbar-nav">
+                                  <li><a href="index.php">Accueil <span class="sr-only">(current)</span></a></li>
+                                  <li><a href="#ancreForfait" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Forfait</a></li>
+                                  <li class="dropdown">
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">A propos<span class="caret"></span></a>
+                                      <ul class="dropdown-menu">
+                                          <li><a href="http://steamcommunity.com/id/OpenNoobLinuxGameServeurProvider" target="_blank" >Steam</a></li>
+                                          <li><a href="https://www.facebook.com/Open-Noob-Game-Serveur-Provider-529004257451467/?fref=ts" target="_blank" >Facebook</a></li>
+                                          <li><a href="https://twitter.com/OpenNoobGame" target="_blank" >Twitter</a></li>
+                                      </ul>
+                                  </li>
+                                  <li><a href="forum.php">Forum</a></li>
+                              </ul>
                         <ul class="col-xs-11 col-sm-7 col-md-3 nav navbar-nav navbar-right">
                             <li><a href="inscription.php"><i class="glyphicon glyphicon-list-alt"></i> Créer un compte</a></li>
                             <li class="dropdown">
@@ -68,7 +90,7 @@
                                         </div>
                                         <div class="input">
                                             <label for="mdp">Mot de passe</label>
-                                            <input type="password" name="passwd" id="mdp" class="form-control" placeholder="Mot de passe" required>
+                                            <input type="password" name="password" id="mdp" class="form-control" placeholder="Mot de passe" required>
                                         </div>
                                         <button id="btn-connexion" type="submit" class="btn btn-info btn-center">Se connecter</button>
                                         <a href="perdu.php">Mot de passe perdu</a>

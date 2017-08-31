@@ -22,30 +22,42 @@
     font-style: normal;
 }
 
+h2 {
+  font-family: 'Sedgwick Ave Display';
+}
+.dev {
+  border: 2px solid red;
+}
+.dev2 {
+  border: 2px solid blue;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #5bc0de;
+    background: aliceblue;
+}
+
+a.top {
+   position:fixed;
+}
 
 html,body, main{
-    margin: 0 auto;
+    margin: 2rem auto 0 auto;
     padding: 0;
     width: 100%;
     height: auto;
 }
 
-.menu{
-    height: 7rem;
-    background-color: #36454f;
-    font-size: 1.5em;
-    font-family: 'roboto_monobold';
-}
-
-.menu a{
-    margin-top: 1em;
+a {
+    color: aliceblue;
+    text-decoration: none;
 }
 
 ul li{
     list-style: none;
 }
 
-.slider{
+.slider {
     padding-left: 0;
     padding-right: 0;
 }
@@ -108,27 +120,10 @@ ul li{
     height: auto;
 }
 
-.listeJeux{
-    margin-top: 6rem;
-    margin-bottom: 8rem;
-}
-
-.listeJeux h2 {
-    margin-bottom: 2rem;
-    color: #708090;
-}
-
-.listeJeux p{
-    margin-bottom: 4rem;
-    color: #708090;
-}
 
 
 
-.fa-steam-square{
-    font-size: 4em;
-    color: #536878;
-}
+
 
 .fa-linux{
     font-size: 4em;
@@ -142,8 +137,8 @@ ul li{
     margin-top: 10rem;
 }
 
-.etendre{
-    font-size: 1.3em;
+.etendre {
+    font-size: 1.3em ;
 }
 
 .thumbnail{
@@ -159,19 +154,6 @@ ul li{
     font-size: 3.6em;
     margin-left: 50%;
 }
-
-footer {
-    position: absolute;
-    bottom: 0;
-    background-color: #36454f;
-}
-
-footer p {
-    margin: 1em;
-    padding: 2em;
-    color: aliceblue;
-}
-
 h4 {
     font-family: "sedgwick_ave_displayregular";
     padding: 1em;
@@ -185,19 +167,6 @@ h4 {
     display: flex;
     margin-top: 1em;
     justify-content: space-around;
-}
-
-.footer li {
-    text-align: center;
-    color: aliceblue;
-}
-
-footer h3{
-    color: aliceblue;
-}
-
-footer h4{
-    color: aliceblue;
 }
 
 .row{
@@ -228,32 +197,7 @@ footer h4{
 }
 
 
-* html #menu-bar {
-    height: 1%;
-}
 
-.logo {
-    /*width: 20px;*/
-    height: 50px;
-}
-
-.navbar {
-    margin: 0;
-}
-
-.navbar-default .navbar-nav>li>a {
-    color: white;
-    background: #36454f;
-}
-
-.navbar a:hover {
-    color: black;
-    font-weight: bold;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: white;
-}
 
 header{
     width: 100%;
@@ -261,13 +205,135 @@ header{
     background: #36454f;
 }
 
-.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
-    background-color: #36454f;
-}
+
 
 .container-fluid {
     padding: 0.5rem;
     background-color:  #36454f;
+}
+
+
+
+
+
+.blocmembre {
+    margin-top: 15rem;
+    margin-bottom: 25rem;
+}
+
+.imgMarge{
+    margin-bottom: 3rem;
+}
+
+
+
+.zindex{
+    z-index: 0;
+}
+
+
+.mentions {
+    margin-top: 1.5em;
+    text-align: center;
+    color: #4e4e4e;
+}
+
+.colorError{
+    color: red;
+}
+
+#redIcone{
+    color: red;
+    font-size: 4em;
+}
+
+.regleForm {
+    margin-top: 10rem;
+}
+
+#commentaire{
+    width: 25rem;
+    height: 12rem;
+    margin-bottom: 1rem;
+}
+
+#auteur{
+    width: 25rem;
+    margin-bottom: 2rem;
+}
+
+#validForm{
+    margin-bottom: 8rem;
+}
+
+.fa-check-square{
+    color: red;
+    display: flex;
+}
+
+.fa-check-square p{
+    color: black;
+}
+
+.titreForum {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+//////////////////////////////[RESTE]/////////////////////////////////
+
+p #forfait-p {
+  color: aliceblue;
+}
+
+#btnInscription {
+    text-align: center;
+}
+///////////////////////////////[MENU]///////////////////////////////
+
+.navbar-default {
+    background-color: #36454f;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.navbar {
+    margin: 0;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: aliceblue;
+    background: #36454f;
+}
+
+.navbar ul:hover {
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: aliceblue;
+}
+
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    background-color: #36454f;
+}
+
+.logo {
+    height: 50px;
+}
+
+.menu{
+    height: 7rem;
+    background-color: #36454f;
+    font-size: 1.5em;
+    font-family: 'roboto_monobold';
+}
+
+.menu a{
+    margin-top: 1em;
 }
 
 #menu-connexion {
@@ -277,7 +343,7 @@ header{
 }
 
 #menu-connexion a {
-    color: white;
+    color: aliceblue;
     padding-left: 3rem;
     font-size: 0.8em;
 }
@@ -290,28 +356,11 @@ header{
     padding: 1rem 6rem;
 }
 
-.blocmembre {
-    margin-top: 15rem;
-    margin-bottom: 25rem;
-}
 
-.imgMarge{
-    margin-bottom: 3rem;
-}
+///////////////////////////////[NEWS]///////////////////////////////
 
-figcaption{
-    background: aliceblue;
-    opacity: 0.8;
-    width: 100%;
-    height: 35%;
-    position: absolute;
-    bottom: 0;
-    z-index: 1000;
-}
 
-.zindex{
-    z-index: 0;
-}
+///////////////////////////////[LISTE DE JEUX]///////////////////////////////
 
 figure{
     z-index: 1500;
@@ -329,22 +378,71 @@ figure:hover
     font-size: 1.025em;
 }
 
-.navbar-default {
+.listeJeux{
+    margin-top: 6rem;
+    margin-bottom: 8rem;
+}
+
+.listeJeux h2 {
+    margin-bottom: 2rem;
+    color: #708090;
+}
+
+.listeJeux p{
+    margin-bottom: 4rem;
+    color: #708090;
+}
+
+figcaption{
+    background: aliceblue;
+    opacity: 0.8;
+    width: 100%;
+    height: 35%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1000;
+}
+
+
+///////////////////////////////[FOOTER]///////////////////////////////
+///////////////////////////////[FOOTER]///////////////////////////////
+
+footer a {
+    color: aliceblue;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
     background-color: #36454f;
 }
 
-.navbar-brand {
-    padding: 0;
+footer p {
+    margin: 1em;
+    padding: 2em;
+    color: aliceblue;
 }
 
-.mentions {
-    margin-top: 1.5em;
+.footer li {
     text-align: center;
-    color: #4e4e4e;
+    color: aliceblue;
+}
+
+a:hover {
+    color: #31b0d5;
+}
+
+h3{
+    color: aliceblue;
+}
+
+footer h4{
+    color: aliceblue;
 }
 
 .modal-body h2{
-    color: #4e4e4e;
+    color: red;
 }
 
 .modal-body h3{
@@ -352,22 +450,17 @@ figure:hover
 }
 
 .modal-body p{
-    color: #4e4e4e;  
+    color: #4e4e4e;
 }
 
 .modal-body a{
-    color: #4e4e4e; 
+    color: #4e4e4e;
     text-decoration: underline;
 }
 
 .modal-body li{
-    color: #4e4e4e;  
+    color: #4e4e4e;
 }
 
-footer a {
-    color: aliceblue;
-}
 
-#btnInscription {
-    text-align: center;
-}
+////////////////////////////////////////////////

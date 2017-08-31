@@ -26,7 +26,7 @@
             <ul class="text-center">
                 <h3 class="text-center">A propos</h3>
                 <h4>Qui sommes nous ?</h4>
-                <li>Mohamed Kermiche</li>
+                <li><a href="http://kermiche.000webhostapp.com/" target="_blank" >Mohamed Kermiche</a></li>
                 <li>Gerald Poncet</li>
                 <li>Nicolas Lidon</li>
                 <li>Kervan Mazuy</li>
@@ -182,7 +182,7 @@
             <div class="col-md-offset-1 col-md-4 col-xs-12">
                 <ul>
                     <li class="col-md-2 col-xs-2">
-                        <a href="https://www.facebook.com/Open-Noob-Game-Serveur-Provider-529004257451467/?fref=ts">
+                        <a href="https://www.facebook.com/Open-Noob-Game-Serveur-Provider-529004257451467/?fref=ts" target="_blank" >
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-square-o fa-stack-2x"></i>
                                 <i class="fa fa-facebook fa-stack-1x"></i>
@@ -191,7 +191,7 @@
                     </li>
 
 
-                    <li class="col-md-2  col-xs-2"><a href="https://twitter.com/OpenNoobGame">
+                    <li class="col-md-2  col-xs-2"><a href="https://twitter.com/OpenNoobGame" target="_blank" >
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-square-o fa-stack-2x"></i>
                             <i class="fa fa-twitter fa-stack-1x"></i>
@@ -200,7 +200,7 @@
                     </li>
 
 
-                    <li class="col-md-2  col-xs-2"><a href="https://www.youtube.com/channel/UC1QsSdwlAZmbMcpbZ5hPzxw">
+                    <li class="col-md-2  col-xs-2"><a href="https://www.youtube.com/channel/UC1QsSdwlAZmbMcpbZ5hPzxw" target="_blank" >
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-square-o fa-stack-2x"></i>
                             <i class="fa fa-youtube fa-stack-1x"></i>
@@ -208,7 +208,7 @@
                     </li>
 
 
-                    <li class="col-md-2  col-xs-2"><a href="http://steamcommunity.com/id/OpenNoobLinuxGameServeurProvider">
+                    <li class="col-md-2  col-xs-2"><a href="http://steamcommunity.com/id/OpenNoobLinuxGameServeurProvider" target="_blank" >
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-square-o fa-stack-2x"></i>
                             <i class="fa fa-steam fa-stack-1x"></i>
@@ -216,7 +216,7 @@
                     </li>
 
 
-                    <li class="col-md-2 col-xs-2"><a href="https://www.twitch.tv/onlgsp/videos/all">
+                    <li class="col-md-2 col-xs-2"><a href="https://www.twitch.tv/onlgsp/videos/all" target="_blank" >
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-square-o fa-stack-2x"></i>
                             <i class="fa fa-twitch fa-stack-1x"></i>

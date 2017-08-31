@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mar. 29 août 2017 à 14:23
+-- Généré le :  mer. 30 août 2017 à 16:59
 -- Version du serveur :  10.1.25-MariaDB
 -- Version de PHP :  7.1.7
 
@@ -168,23 +168,29 @@ CREATE TABLE `newsletter` (
 
 CREATE TABLE `users` (
   `idUsers` int(11) NOT NULL,
+  `pseudo` varchar(500) NOT NULL,
   `email` varchar(190) NOT NULL,
-  `passwd` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
   `role` int(1) DEFAULT '0',
   `Ip` varchar(15) NOT NULL,
   `session` int(250) NOT NULL,
   `finSession` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `actif` char(1) DEFAULT '0'
+  `actif` char(1) DEFAULT '0',
+  `token` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`idUsers`, `email`, `passwd`, `role`, `Ip`, `session`, `finSession`, `actif`) VALUES
-(1, 'medkermiche@hotmail.fr', '$2y$10$N9usxml9XXUX7zU8sX0HkumHdgD1VdbFy1e69X4dwnQMn3JnWnri6', 0, '', 0, '2017-08-28 08:04:11', '1'),
-(12, 'aaaaermiche@hotmail.fr', '$2y$10$3y7eFbZbXi9qNz6wxVMRGOk1Ia90Rgh.bs1QOkwBf/n9GAhqB735y', 0, '', 0, '2017-08-28 09:27:48', '1'),
-(32, 'ccccccc@cccccc.ccccc', '$2y$10$62Xqx2QPJWz.mOWnwcFsc.K4jC5rWUVKfMxzWg2UldR9DObSBNAhC', 0, '', 0, '2017-08-28 13:07:40', '1');
+INSERT INTO `users` (`idUsers`, `pseudo`, `email`, `password`, `role`, `Ip`, `session`, `finSession`, `actif`, `token`) VALUES
+(1, '', 'medkermiche@hotmail.fr', '$2y$10$N9usxml9XXUX7zU8sX0HkumHdgD1VdbFy1e69X4dwnQMn3JnWnri6', 0, '', 0, '2017-08-28 08:04:11', '1', ''),
+(12, '', 'aaaaermiche@hotmail.fr', '$2y$10$3y7eFbZbXi9qNz6wxVMRGOk1Ia90Rgh.bs1QOkwBf/n9GAhqB735y', 0, '', 0, '2017-08-28 09:27:48', '1', ''),
+(32, '', 'ccccccc@cccccc.ccccc', 'Mohamed00', 0, '', 0, '2017-08-28 13:07:40', '1', ''),
+(33, '', 'jccc@ccmmmmc.ccccc', '$2y$10$QXw4uKMkYDs3nGbe1r2ree8PtzRKrpDX443yIA/e.4aSqyKcYxP1q', 0, '', 0, '2017-08-29 12:44:52', '1', ''),
+(35, 'mlk69400\r\n', 'mohamedkermiche@hotmail.com', '$2y$10$gNPTmhI4o4YnaTVlQI5XF.XAoJQWXHkOsW0j2m7n3Lx/oDD3hLC.a', 0, '', 0, '2017-08-29 13:36:12', '1', ''),
+(37, 'mlk', 'mohamedkermiche@hotmail.fr', '$2y$10$MAZ33M5QEyBz7PHUHL3EpO7dJeolf01dZmm0hWdgQS3Rjq0KQ6ah2', 1, '', 0, '2017-08-29 13:49:04', '1', '43af6590b638c0ede5a92f23cf63c239'),
+(38, 'Luciol', 'lgallay@orange.fr', '$2y$10$7t4TKp4LfaZul.SVlsmP/uGaqwk6.jBYnJz22lcREtNDXd24/eRTq', NULL, '', 0, '2017-08-30 11:19:09', '1', '');
 
 -- --------------------------------------------------------
 
@@ -201,7 +207,6 @@ CREATE TABLE `usersdetails` (
   `siret` varchar(20) NOT NULL,
   `nom` varchar(100) NOT NULL,
   `prenom` varchar(100) NOT NULL,
-  `pseudo` varchar(50) NOT NULL,
   `adresse` text NOT NULL,
   `cp` decimal(5,0) UNSIGNED ZEROFILL NOT NULL,
   `ville` varchar(100) NOT NULL,
@@ -234,20 +239,25 @@ CREATE TABLE `userslicences` (
 -- (Voir ci-dessous la vue réelle)
 --
 CREATE TABLE `view_users` (
-`idUsersDetails` int(11)
-,`idUsers` int(11)
-,`raisonSociale` varchar(250)
-,`tvaIntra` varchar(20)
-,`ape` varchar(10)
-,`siret` varchar(20)
-,`nom` varchar(100)
-,`prenom` varchar(100)
-,`pseudo` varchar(50)
-,`adresse` text
-,`cp` decimal(5,0) unsigned zerofill
-,`ville` varchar(100)
-,`pays` varchar(100)
-,`telephone` varchar(20)
+`idUsers` int(11)
+,`pseudoUsers` varchar(500)
+,`emailUsers` varchar(190)
+,`passwordUsers` varchar(100)
+,`sessionUsers` int(250)
+,`ipUsers` varchar(15)
+,`finSessionUsers` timestamp
+,`actifUsers` char(1)
+,`raisonSocialeUsers` varchar(250)
+,`tvaIntraUsers` varchar(20)
+,`apeUsers` varchar(10)
+,`siretUsers` varchar(20)
+,`nomUsers` varchar(100)
+,`prenomUsers` varchar(100)
+,`adresseUsers` text
+,`cpUsers` decimal(5,0) unsigned zerofill
+,`villeUsers` varchar(100)
+,`paysUsers` varchar(100)
+,`telephoneUsers` varchar(20)
 );
 
 -- --------------------------------------------------------
@@ -257,7 +267,7 @@ CREATE TABLE `view_users` (
 --
 DROP TABLE IF EXISTS `view_users`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_users`  AS  select `usersdetails`.`idUsersDetails` AS `idUsersDetails`,`usersdetails`.`idUsers` AS `idUsers`,`usersdetails`.`raisonSociale` AS `raisonSociale`,`usersdetails`.`tvaIntra` AS `tvaIntra`,`usersdetails`.`ape` AS `ape`,`usersdetails`.`siret` AS `siret`,`usersdetails`.`nom` AS `nom`,`usersdetails`.`prenom` AS `prenom`,`usersdetails`.`pseudo` AS `pseudo`,`usersdetails`.`adresse` AS `adresse`,`usersdetails`.`cp` AS `cp`,`usersdetails`.`ville` AS `ville`,`usersdetails`.`pays` AS `pays`,`usersdetails`.`telephone` AS `telephone` from `usersdetails` ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_users`  AS  select `u`.`idUsers` AS `idUsers`,`u`.`pseudo` AS `pseudoUsers`,`u`.`email` AS `emailUsers`,`u`.`password` AS `passwordUsers`,`u`.`session` AS `sessionUsers`,`u`.`Ip` AS `ipUsers`,`u`.`finSession` AS `finSessionUsers`,`u`.`actif` AS `actifUsers`,`ud`.`raisonSociale` AS `raisonSocialeUsers`,`ud`.`tvaIntra` AS `tvaIntraUsers`,`ud`.`ape` AS `apeUsers`,`ud`.`siret` AS `siretUsers`,`ud`.`nom` AS `nomUsers`,`ud`.`prenom` AS `prenomUsers`,`ud`.`adresse` AS `adresseUsers`,`ud`.`cp` AS `cpUsers`,`ud`.`ville` AS `villeUsers`,`ud`.`pays` AS `paysUsers`,`ud`.`telephone` AS `telephoneUsers` from (`users` `u` left join `usersdetails` `ud` on((`u`.`idUsers` = `ud`.`idUsers`))) ;
 
 --
 -- Index pour les tables déchargées
@@ -335,7 +345,7 @@ ALTER TABLE `newsletter`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `idUsers` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `idUsers` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 --
 -- Contraintes pour les tables déchargées
 --

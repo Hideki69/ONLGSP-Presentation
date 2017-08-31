@@ -30,10 +30,10 @@ if($exists == 1)
 	$mail->CharSet = "UTF-8"; //mail au format UTF-8
 	$mail->isSMTP(); // connexion directe au serveur SMTP
 	$mail->isHTML(true); // on va utiliser le format HTML
-	$mail->Host = "relay-hosting.secureserver.net"; //le serveur de messagerie
-	$mail->Port = 465; //le port obligatoire de google
+	$mail->Host = "smtp.gmail.com"; //le serveur de messagerie
+	$mail->Port = 587; //le port obligatoire de google
 	$mail->SMTPAuth = true; // on va fournir un login/pass au serveur
-	$mail->SMTPSecure = 'ssl'; //certificat SSL
+	$mail->SMTPSecure = 'tls'; //certificat SSL
 	$mail->Username = 'wf3villefranche@gmail.com'; //utilisateur SMTP
 	$mail->Password = 'Azerty1234'; // mot de passe SMTP
 	$mail->setFrom('wf3villefranche@gmail.com', 'ONLGSP'); //expéditeur
