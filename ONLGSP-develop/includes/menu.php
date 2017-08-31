@@ -48,7 +48,7 @@
                                           <li><a href="https://twitter.com/OpenNoobGame" target="_blank" >Twitter</a></li>
                                       </ul>
                                   </li>
-                                  <li><a href="forum.php">Forum</a></li>
+                                  <li><a href="sectionJeu.php">Forum</a></li>
                               </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="#"><i class="glyphicon glyphicon-user"></i>

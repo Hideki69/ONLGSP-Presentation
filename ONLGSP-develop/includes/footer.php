@@ -23,10 +23,10 @@
         </div>
 
         <div class="col-xs-11 col-md-4">
-            <ul class="text-center">
+            <ul class="text-center propos">
                 <h3 class="text-center">A propos</h3>
                 <h4>Qui sommes nous ?</h4>
-                <li><a href="http://kermiche.000webhostapp.com/" target="_blank" >Mohamed Kermiche</a></li>
+                <li><a  class="blue" href="http://kermiche.000webhostapp.com/" target="_blank" >Mohamed Kermiche</a></li>
                 <li>Gerald Poncet</li>
                 <li>Nicolas Lidon</li>
                 <li>Kervan Mazuy</li>
@@ -41,7 +41,7 @@
         <div class="col-md-12">
             <div class="col-md-3 col-xs-12 mentions">
                 <!-- Button trigger modal -->
-                <a href="#" data-toggle="modal" data-target="#myModal">Politique de Confidentialité</a>
+                <a href="#" data-toggle="modal" data-target="#myModal" class="blue">Politique de Confidentialité</a>
 
                 <!-- Modal Politique-->
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -179,10 +179,10 @@
                 </div>
             </div>
 
-            <div class="col-md-offset-1 col-md-4 col-xs-12">
+            <div class="reseaux col-md-offset-1 col-md-4 col-xs-12">
                 <ul>
                     <li class="col-md-2 col-xs-2">
-                        <a href="https://www.facebook.com/Open-Noob-Game-Serveur-Provider-529004257451467/?fref=ts" target="_blank" >
+                        <a class="blue" href="https://www.facebook.com/Open-Noob-Game-Serveur-Provider-529004257451467/?fref=ts" target="_blank" >
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-square-o fa-stack-2x"></i>
                                 <i class="fa fa-facebook fa-stack-1x"></i>
@@ -191,7 +191,7 @@
                     </li>
 
 
-                    <li class="col-md-2  col-xs-2"><a href="https://twitter.com/OpenNoobGame" target="_blank" >
+                    <li class="col-md-2  col-xs-2"><a class="blue" href="https://twitter.com/OpenNoobGame" target="_blank" >
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-square-o fa-stack-2x"></i>
                             <i class="fa fa-twitter fa-stack-1x"></i>
@@ -200,7 +200,7 @@
                     </li>
 
 
-                    <li class="col-md-2  col-xs-2"><a href="https://www.youtube.com/channel/UC1QsSdwlAZmbMcpbZ5hPzxw" target="_blank" >
+                    <li class="col-md-2  col-xs-2"><a class="blue" href="https://www.youtube.com/channel/UC1QsSdwlAZmbMcpbZ5hPzxw" target="_blank" >
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-square-o fa-stack-2x"></i>
                             <i class="fa fa-youtube fa-stack-1x"></i>
@@ -208,7 +208,7 @@
                     </li>
 
 
-                    <li class="col-md-2  col-xs-2"><a href="http://steamcommunity.com/id/OpenNoobLinuxGameServeurProvider" target="_blank" >
+                    <li class="col-md-2  col-xs-2"><a class="blue" href="http://steamcommunity.com/id/OpenNoobLinuxGameServeurProvider" target="_blank" >
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-square-o fa-stack-2x"></i>
                             <i class="fa fa-steam fa-stack-1x"></i>
@@ -216,7 +216,7 @@
                     </li>
 
 
-                    <li class="col-md-2 col-xs-2"><a href="https://www.twitch.tv/onlgsp/videos/all" target="_blank" >
+                    <li class="col-md-2 col-xs-2"><a class="blue" href="https://www.twitch.tv/onlgsp/videos/all" target="_blank" >
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-square-o fa-stack-2x"></i>
                             <i class="fa fa-twitch fa-stack-1x"></i>
@@ -228,7 +228,7 @@
 
             <div class="col-md-3 col-xs-12 mentions">
                 <!-- Button trigger modal -->
-                <a class="col-md-offset-6" href="#" data-toggle="modal" data-target="#myModal1">Mentions Légales</a>
+                <a class="blue col-md-offset-6" href="#" data-toggle="modal" data-target="#myModal1">Mentions Légales</a>
 
                 <!-- Modal Mention légale-->
                 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

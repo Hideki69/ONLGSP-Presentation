@@ -3,10 +3,11 @@ include'includes/entete.php';
 include'includes/menu.php';
 include'includes/connexion.php';
 ?>
+
 <div class="container">
     <div class="row">
         <h1 class="titreForum text-center">Forum</h1>
-        <p class="text-center"><a href="forum.php">Retour à la liste des billets</a></p>
+        <p class="text-center"><a href="sectionJeu.php">Retour à la liste des billets de la Section Jeux</a></p>
         <div class="row">
             <div class="col-md-12">
                 <div class="bordure"></div>
@@ -16,7 +17,7 @@ include'includes/connexion.php';
 
         $safe = array_map('strip_tags', $_GET);
         // Récupération du billet
-        $req = $dbh->prepare('SELECT id_billet, titre, contenu, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation_fr FROM billets WHERE id_billet = :billet');
+        $req = $dbh->prepare('SELECT id_billetJeux, titre, contenuBilletJeux, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation_fr FROM billetJeux WHERE id_billetJeux = :billet');
         $params = array(':billet'=>$safe['billet']);
         $req->execute($params);
         $donnees = $req->fetch();
@@ -31,7 +32,7 @@ include'includes/connexion.php';
 
                     <p>
                         <?php
-                        echo nl2br(htmlspecialchars($donnees['contenu']));
+                        echo nl2br(htmlspecialchars($donnees['contenuBilletJeux']));
                         ?>
                     </p>
 
@@ -46,7 +47,7 @@ include'includes/connexion.php';
                     $req->closeCursor(); // Important : on libère le curseur pour la prochaine requête
 
                     // Récupération des commentaires
-                    $req = $dbh->prepare('SELECT id, auteur, commentaire, DATE_FORMAT(date_commentaire, \'%d/%m/%Y à %Hh%imin%ss\') AS date_commentaire_fr FROM commentaires WHERE id_billet = :id_commentaire ORDER BY date_commentaire');
+                    $req = $dbh->prepare('SELECT id, auteur, commentaire, DATE_FORMAT(date_commentaireJeux, \'%d/%m/%Y à %Hh%imin%ss\') AS date_commentaire_fr FROM commentaireJeux WHERE id_billetJeux = :id_commentaire ORDER BY date_commentaireJeux');
                     $param = array(':id_commentaire'=>$safe['billet']);
                     $req->execute($param);
 
@@ -71,18 +72,10 @@ include'includes/connexion.php';
                 <div class="bordure"></div>
             </div>
         </div>
-
-        <div class="row">
-            <form class="text-center" method="post" action="commentaire_post.php?billet=<?= $safe['billet']; ?>">
-                <input type="hidden" name="id_billet" value="<?= $safe['billet'] ?>">
-                <input type="hidden" name="auteur" id="auteur" value="<?= $_SESSION['pseudo'] ?>">
-                <input type="text" name="commentaire" id="commentaire" placeholder="Tapez Votre Commentaire .. "><br>
-                <button  class="btn btn-submit" type="submit" name="validForm" id="validForm" disabled> Envoyez </button>
-            </form>
-        </div>
     </div>
 </div>
-<?php
-    include'includes/footer.php';
-                       include'includes/basPage.php';
-?>
+
+        <?php
+        include'includes/footer.php';
+        include'includes/basPage.php';
+        ?>

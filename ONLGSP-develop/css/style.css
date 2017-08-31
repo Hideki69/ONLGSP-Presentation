@@ -49,7 +49,6 @@ html,body, main{
 }
 
 a {
-    color: aliceblue;
     text-decoration: none;
 }
 
@@ -120,11 +119,6 @@ ul li{
     height: auto;
 }
 
-
-
-
-
-
 .fa-linux{
     font-size: 4em;
 }
@@ -147,7 +141,7 @@ ul li{
 
 .bordure {
     border-bottom: 2px solid black;
-    margin-bottom: 10rem;
+    margin-bottom: 4rem;
 }
 
 .fa-star-o {
@@ -206,15 +200,10 @@ header{
 }
 
 
-
 .container-fluid {
     padding: 0.5rem;
     background-color:  #36454f;
 }
-
-
-
-
 
 .blocmembre {
     margin-top: 15rem;
@@ -236,6 +225,10 @@ header{
     margin-top: 1.5em;
     text-align: center;
     color: #4e4e4e;
+}
+
+.blue{
+    color: aliceblue;
 }
 
 .colorError{
@@ -277,7 +270,7 @@ header{
 
 .titreForum {
     margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
 }
 
 //////////////////////////////[RESTE]/////////////////////////////////
@@ -429,15 +422,19 @@ footer p {
     color: aliceblue;
 }
 
-a:hover {
-    color: #31b0d5;
+.footer li a:hover{
+    color: #5bc0de;
 }
 
-h3{
-    color: aliceblue;
+a:hover {
+    color: #5bc0de;
 }
 
 footer h4{
+    color: aliceblue;
+}
+
+footer h3{
     color: aliceblue;
 }
 
@@ -464,3 +461,29 @@ footer h4{
 
 
 ////////////////////////////////////////////////
+
+.propos h3{
+    color: aliceblue;
+}
+
+.propos a{
+    color: aliceblue;
+}
+
+
+
+.commentaire {
+    background: #5bc0de;
+}
+
+.bordureDroite {
+    border-right: 2px solid black;
+}
+
+
+
+.sujet {
+    font-size: 1.5em;
+}
+
+

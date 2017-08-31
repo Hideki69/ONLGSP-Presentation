@@ -80,4 +80,23 @@ jQuery(function($) {
             event.preventDefault();
         });
     }
+
+    $('input').keyup(function(){
+        if($('#titreBillet').val() != '' && $('#contenuBillet').val() != '' && $('#commentaire').val() != '' && $('#contenuBilletJeux').val() != '')
+        {
+            $('#validBillet').prop("disabled", false); 
+            $('#validBilletJeux').prop("disabled", false); 
+            $('#validForm').prop("disabled", false); // Element(s) are now enabled.
+        }
+        else
+        {
+            $('#validBillet').prop("disabled", true); 
+            $('#validBilletJeux').prop("disabled", true); 
+            $('#validForm').prop("disabled", true); // Element(s) are now enabled.
+            event.preventDefault();
+        }
+    });
+
+
+
 });
