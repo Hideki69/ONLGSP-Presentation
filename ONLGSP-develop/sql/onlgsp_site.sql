@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mer. 30 août 2017 à 16:59
+-- Généré le :  jeu. 31 août 2017 à 10:31
 -- Version du serveur :  10.1.25-MariaDB
 -- Version de PHP :  7.1.7
 
@@ -21,6 +21,55 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `onlgsp_site`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `billets`
+--
+
+CREATE TABLE `billets` (
+  `id_billet` int(11) NOT NULL,
+  `idUsers` int(11) NOT NULL,
+  `auteur` varchar(250) NOT NULL,
+  `titre` varchar(255) NOT NULL,
+  `contenu` text NOT NULL,
+  `date_creation` datetime NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `billets`
+--
+
+INSERT INTO `billets` (`id_billet`, `idUsers`, `auteur`, `titre`, `contenu`, `date_creation`) VALUES
+(1, 0, 'Kervan', 'Bienvenue sur mon blog !', 'Je vous souhaite à toutes et à tous la bienvenue sur mon blog qui parlera de... PHP bien sûr !', '2010-03-25 16:28:41'),
+(2, 0, 'Mohammed', 'Le PHP à la conquête du monde !', 'C\'est officiel, l\'éléPHPant a annoncé à la radio hier soir \"J\'ai l\'intention de conquérir le monde !\".\r\nIl a en outre précisé que le monde serait à sa botte en moins de temps qu\'il n\'en fallait pour dire \"éléPHPant\". Pas dur, ceci dit entre nous...', '2010-03-27 18:31:11'),
+(5, 0, 'Nicolas', 'ONLGSP, ça déchire t\'as mère ! ', 'Création de Open Noob Linux Game Serveur Provider, un super site pour jouer à vos jeux favoris sur Linux !', '2017-08-30 12:04:48');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `commentaires`
+--
+
+CREATE TABLE `commentaires` (
+  `id` int(11) NOT NULL,
+  `id_billet` int(11) NOT NULL,
+  `auteur` varchar(255) NOT NULL,
+  `commentaire` text NOT NULL,
+  `date_commentaire` datetime NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `commentaires`
+--
+
+INSERT INTO `commentaires` (`id`, `id_billet`, `auteur`, `commentaire`, `date_commentaire`) VALUES
+(1, 1, 'M@teo21', 'Un peu court ce billet !', '2010-03-25 16:49:53'),
+(2, 1, 'Maxime', 'Oui, ça commence pas très fort ce blog...', '2010-03-25 16:57:16'),
+(3, 1, 'MultiKiller', '+1 !', '2010-03-25 17:12:52'),
+(4, 2, 'John', 'Preum\'s !', '2010-03-27 18:59:49'),
+(5, 2, 'Maxime', 'Excellente analyse de la situation !\r\nIl y arrivera plus tôt qu\'on ne le pense !', '2010-03-27 22:02:13');
 
 -- --------------------------------------------------------
 
@@ -190,7 +239,8 @@ INSERT INTO `users` (`idUsers`, `pseudo`, `email`, `password`, `role`, `Ip`, `se
 (33, '', 'jccc@ccmmmmc.ccccc', '$2y$10$QXw4uKMkYDs3nGbe1r2ree8PtzRKrpDX443yIA/e.4aSqyKcYxP1q', 0, '', 0, '2017-08-29 12:44:52', '1', ''),
 (35, 'mlk69400\r\n', 'mohamedkermiche@hotmail.com', '$2y$10$gNPTmhI4o4YnaTVlQI5XF.XAoJQWXHkOsW0j2m7n3Lx/oDD3hLC.a', 0, '', 0, '2017-08-29 13:36:12', '1', ''),
 (37, 'mlk', 'mohamedkermiche@hotmail.fr', '$2y$10$MAZ33M5QEyBz7PHUHL3EpO7dJeolf01dZmm0hWdgQS3Rjq0KQ6ah2', 1, '', 0, '2017-08-29 13:49:04', '1', '43af6590b638c0ede5a92f23cf63c239'),
-(38, 'Luciol', 'lgallay@orange.fr', '$2y$10$7t4TKp4LfaZul.SVlsmP/uGaqwk6.jBYnJz22lcREtNDXd24/eRTq', NULL, '', 0, '2017-08-30 11:19:09', '1', '');
+(38, 'Luciol', 'lgallay@orange.fr', '$2y$10$7t4TKp4LfaZul.SVlsmP/uGaqwk6.jBYnJz22lcREtNDXd24/eRTq', NULL, '', 0, '2017-08-30 11:19:09', '1', ''),
+(39, 'gfhfghfghfg', 'hdfhdf@sfhfhfhg.gh', '$2y$10$WYkBS0rd4roueu4xnfA3KuWZbO6BAS7T1Ov96POxvAKN8J0X.bnqG', 0, '', 0, '2017-08-31 07:45:33', '1', '');
 
 -- --------------------------------------------------------
 
@@ -274,6 +324,18 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 
 --
+-- Index pour la table `billets`
+--
+ALTER TABLE `billets`
+  ADD PRIMARY KEY (`id_billet`);
+
+--
+-- Index pour la table `commentaires`
+--
+ALTER TABLE `commentaires`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `jeux`
 --
 ALTER TABLE `jeux`
@@ -322,6 +384,16 @@ ALTER TABLE `userslicences`
 --
 
 --
+-- AUTO_INCREMENT pour la table `billets`
+--
+ALTER TABLE `billets`
+  MODIFY `id_billet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT pour la table `commentaires`
+--
+ALTER TABLE `commentaires`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
 -- AUTO_INCREMENT pour la table `jeux`
 --
 ALTER TABLE `jeux`
@@ -345,7 +417,7 @@ ALTER TABLE `newsletter`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `idUsers` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `idUsers` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 --
 -- Contraintes pour les tables déchargées
 --
