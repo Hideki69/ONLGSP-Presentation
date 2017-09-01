@@ -108,5 +108,4 @@
             </div> <!-- bloc -->
         </div><!-- /.container-fluid -->
     </nav>
-
 </header>

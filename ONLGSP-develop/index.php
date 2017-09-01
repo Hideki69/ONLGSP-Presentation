@@ -4,7 +4,9 @@
 <!-- menu si connecté et Admin -->
 <?php if(isset($_SESSION['auth'])  && ($_SESSION['role'])): ?>
 <?php include'includes/menu.php' ?>
-<div id="admin"></div>
+<div id="admin">
+    
+</div>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/script.js"></script>
