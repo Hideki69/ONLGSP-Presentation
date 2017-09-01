@@ -6,7 +6,7 @@ include 'includes/connexion.php';
 
 //Mr Propre
 //la categorie existe-t'elle déjà?
-$rqlisteJeux = "SELECT idJeux,image,titre FROM jeux ORDER BY titre";
+$rqlisteJeux = "SELECT idJeux,id_billetJeux, image,titre FROM jeux ORDER BY titre";
 $listeJeux = $dbh->query($rqlisteJeux)->fetchAll();
 
 ?>
@@ -26,7 +26,7 @@ $listeJeux = $dbh->query($rqlisteJeux)->fetchAll();
             echo'<div class="grid">
                   <div class="grid-item">
                     <div class="zindex col-md-2 col-sm-4">
-                      <a href="#">
+                      <a href="commentaireJeux.php?billet='.$listeJeu['id_billetJeux'].'">
                         <figure>
                           <img src="images/miniature/'.$listeJeu['image'].'.jpg" class="img-responsive imgMarge">
                           <figcaption class="titreJeu"><p class="text-center" style="color:black">'.$listeJeu['titre'].'</p></figcaption>

@@ -505,3 +505,30 @@ footer h3{
     width: 100%;
     height: auto;
 }
+
+.titreForfait1 {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+}
+
+.titreNoConnect {
+    margin-bottom: 6rem;
+}
+
+.formNoConnect {
+    margin-bottom: 4rem;
+}
+
+#mdp {
+    margin-bottom: 1.5rem;
+}
+
+
+
+.styleTab {
+    color: aliceblue;
+}
+
+.margeTab {
+    margin-top: 4rem;
+}

@@ -61,9 +61,9 @@ $req->closeCursor();
         <div class="bordure"></div>
     </div>
 </div>
-
+<?php if(isset($_SESSION['auth'])  && ($_SESSION['role'])): ?>
 <div class="row">
-    <div class="col-md-offset-5 col-md-2">
+    <div class="col-md-offset-5 col-md-3">
         <form method="post" action="traitementBilletJeux.php" class="jumbotron">
             <div class="col-md-offset-3">
                 <label class="text-center" for="titreBilletJeux"> Titre du Billet </label><br>
@@ -80,6 +80,8 @@ $req->closeCursor();
         </form>
     </div>
 </div>
+<?php endif; ?>
+
 
 <?php include'includes/footer.php'; ?>
 <?php include'includes/basPage.php'; ?>

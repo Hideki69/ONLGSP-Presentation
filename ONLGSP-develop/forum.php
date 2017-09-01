@@ -1,10 +1,9 @@
 <?php
 include'includes/entete.php';
 include'includes/menu.php';
-
 include'includes/connexion.php';
-
 ?>
+
 <div class="col-md-12 bordureTitreJeux">
     <h1 class="text-center titreForum">Section discution</h1>
     <div class="row text-center">
