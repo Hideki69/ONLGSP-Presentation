@@ -23,7 +23,7 @@
                             <ul class="nav navbar-nav">
                               <li><a  href="#" id="utilisateur">Liste utilisateur</a></li>
 
-                              <li><a href="forum.php" id="forumAdmin">Forum</a></li>
+                              <li><a href="#" id="forumAdmin">Forum</a></li>
                             </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="#"><i class="glyphicon glyphicon-user"></i>
