@@ -17,7 +17,7 @@ include'includes/connexion.php';
 
         $safe = array_map('strip_tags', $_GET);
         // Récupération du billet
-        $req = $dbh->prepare('SELECT id_billetJeux, titre, contenuBilletJeux, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation_fr FROM billetJeux WHERE id_billetJeux = :billet');
+        $req = $dbh->prepare('SELECT id_billetJeux, titre, contenuBilletJeux, auteur, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation_fr FROM billetjeux WHERE id_billetJeux = :billet');
         $params = array(':billet'=>$safe['billet']);
         $req->execute($params);
         $donnees = $req->fetch();
@@ -47,8 +47,8 @@ include'includes/connexion.php';
                     $req->closeCursor(); // Important : on libère le curseur pour la prochaine requête
 
                     // Récupération des commentaires
-                    $req = $dbh->prepare('SELECT id, auteur, commentaire, DATE_FORMAT(date_commentaireJeux, \'%d/%m/%Y à %Hh%imin%ss\') AS date_commentaire_fr FROM commentaireJeux WHERE id_billetJeux = :id_commentaire ORDER BY date_commentaireJeux');
-                    $param = array(':id_commentaire'=>$safe['billet']);
+                    $req = $dbh->prepare('SELECT id, auteur, commentaire, DATE_FORMAT(date_commentaireJeux, \'%d/%m/%Y à %Hh%imin%ss\') AS date_commentaire_fr FROM commentairejeux WHERE id_billetJeux = :id_commentaireJeux ORDER BY date_commentaireJeux');
+                    $param = array(':id_commentaireJeux'=>$safe['billet']);
                     $req->execute($param);
 
                     while ($donnees = $req->fetch())
@@ -72,10 +72,19 @@ include'includes/connexion.php';
                 <div class="bordure"></div>
             </div>
         </div>
+
+        <div class="row">
+            <form class="text-center" method="post" action="commentaireJeux_post.php?billet=<?= $safe['billet']; ?>">
+                <input type="hidden" name="id_billetJeux" value="<?= $safe['billet'] ?>">
+                <input type="hidden" name="auteur" id="auteur" value="<?= $_SESSION['pseudo'] ?>">
+                <input type="text" name="commentaire" id="commentaire" placeholder="Tapez Votre Commentaire .. "><br>
+                <button  class="btn btn-submit" type="submit" name="validForm" id="validForm" disabled> Envoyez </button>
+            </form>
+        </div>
     </div>
 </div>
 
-        <?php
-        include'includes/footer.php';
-        include'includes/basPage.php';
-        ?>
+<?php
+    include'includes/footer.php';
+                       include'includes/basPage.php';
+?>

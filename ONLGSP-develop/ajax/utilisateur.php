@@ -5,7 +5,7 @@ $req = "SELECT * FROM view_users";
 $listeInscrit = $dbh->query($req)->fetchAll();
 ?>
 
-<div class="col-sm-6 col-sm-offset-3 positionTab">
+<div class="col-sm-6 col-sm-offset-3 col-md-6 positionTab">
     <!-- affichage de la liste des produits -->
     <table class="table robert table-striped">
         <thead>

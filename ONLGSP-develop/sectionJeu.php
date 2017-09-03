@@ -19,7 +19,7 @@ include'includes/connexion.php';
 </div>
 <?php
 // On récupère les 5 derniers billets
-$req = $dbh->query('SELECT id_billetJeux, titre, contenuBilletJeux, auteur, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation_fr FROM billetJeux ORDER BY titre ASC');
+$req = $dbh->query('SELECT id_billetJeux, titre, contenuBilletJeux, auteur, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation_fr FROM billetjeux ORDER BY titre ASC');
 
 while ($donnees = $req->fetch())
 {
