@@ -24,7 +24,7 @@ $req = $dbh->query('SELECT id_billetJeux, titre, contenuBilletJeux, auteur, DATE
 while ($donnees = $req->fetch())
 {
     if(empty($donnees)){
-        header('Location: includes/404.php');
+        header('Location: includes/404-Pacman/404.html');
     }
 ?>
 
