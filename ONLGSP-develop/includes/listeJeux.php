@@ -25,11 +25,11 @@ $listeJeux = $dbh->query($rqlisteJeux)->fetchAll();
         {
             echo'<div class="grid">
                   <div class="grid-item">
-                    <div class="col-md-2 col-sm-4">
+                    <div class="col-md-4 col-sm-4 col-lg-4">
                       <a href="commentaireJeux.php?billet='.$listeJeu['id_billetJeux'].'">
                         <figure class="figure">
-                          <img src="images/miniature/'.$listeJeu['image'].'.jpg" class="img-responsive">
-                          <figcaption class="titreJeu"><p class="text-center" style="color:black">'.$listeJeu['titre'].'</p></figcaption>
+                          <img src="images/miniature/'.$listeJeu['image'].'.jpg" class="miniature img-responsive">
+                          <figcaption class="titreJeu"><p class="text-center" style="color:#d9534f">'.$listeJeu['titre'].'</p></figcaption>
                         </figure>
                       </a>
                     </div>

@@ -507,8 +507,8 @@ h3 {
 }
 
 .titreForfait1 {
-    margin-top: 4rem;
-    margin-bottom: 3rem;
+    margin-top: 8rem;
+    margin-bottom: 10rem;
 }
 
 .titreNoConnect {
@@ -634,4 +634,13 @@ h3 {
 .bordureDroite1 {
     border-right: 2px solid black;
     border-bottom: 2px solid black;
+}
+
+.titreModeration{
+    color: black;
+}
+
+.miniature{
+    width: 100%;
+    height: auto;    
 }
