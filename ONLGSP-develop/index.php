@@ -5,9 +5,6 @@
 <?php if(isset($_SESSION['auth'])  && ($_SESSION['role'])): ?>
 <?php include'includes/menu.php' ?>
 <div id="admin"></div>
-
-<?php include'includes/sidebar.php'; ?>
-
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/script.js"></script>
@@ -16,13 +13,10 @@
     $(function() {
         $('#admin').load('ajax/utilisateur.php', function(){
 
-        }); 
-
-        $('#moderation').on('click', function(){
-            $('#admin').load('ajax/moderation.php', function(){
-            });
         });
+        
     });
+
 </script>
 </body>
 </html>

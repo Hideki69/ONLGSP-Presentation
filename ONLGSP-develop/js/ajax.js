@@ -11,8 +11,7 @@ $('#forumAdmin').click(function(){
     });
 });
 
-
-$('#moderation').on('click', function(){
-    $('#admin').load('ajax/moderateur.php', function(){
+$('#statAdmin').click(function(){
+    $('#admin').load('ajax/stats.php', function(){
     });
 });
