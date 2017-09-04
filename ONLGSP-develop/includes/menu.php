@@ -22,14 +22,6 @@
                         <div class="collapse navbar-collapse" id="menu">
                             <ul class="nav navbar-nav">
                               <li><a  href="#" id="utilisateur">Liste utilisateur</a></li>
-                              <li><a href="#" id="forumAdmin">Forum</a></li>
-                              <li class="dropdown">
-                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Forum<span class="caret"></span></a>
-                                  <ul class="dropdown-menu">
-                                      <li><a href="#">Section Jeux</a></li>
-                                      <li><a href="#">Section Discutuion</a></li>
-                                  </ul>
-                              </li>
                               <li><a href="#" id="statAdmin">Stats</a></li>
                             </ul>
                         <ul class="nav navbar-nav navbar-right">
@@ -46,7 +38,7 @@
                           <div class="collapse navbar-collapse" id="menu">
                               <ul class="nav navbar-nav">
                                   <li><a href="index.php">Accueil <span class="sr-only">(current)</span></a></li>
-                                  <li><a href="#ancreForfait" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Forfait</a></li>
+                                  <li><a href="offre2.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Forfait</a></li>
                                   <li class="dropdown">
                                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">A propos<span class="caret"></span></a>
                                       <ul class="dropdown-menu">
@@ -72,13 +64,13 @@
                           <div class="collapse navbar-collapse" id="menu">
                               <ul class="nav navbar-nav">
                                   <li><a href="index.php">Accueil <span class="sr-only">(current)</span></a></li>
-                                  <li><a href="#ancreForfait" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Forfait</a></li>
+                                  <li><a href="offres.php" role="button">Forfait</a></li>
                                   <li class="dropdown">
                                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">A propos<span class="caret"></span></a>
                                       <ul class="dropdown-menu">
                                           <li><a href="http://steamcommunity.com/id/OpenNoobLinuxGameServeurProvider" target="_blank" >Steam</a></li>
                                           <li><a href="https://www.facebook.com/Open-Noob-Game-Serveur-Provider-529004257451467/?fref=ts" target="_blank" >Facebook</a></li>
-                                          <li><a href="https://twitter.com/OpenNoobGame" target="_blank" >Twitter</a></li>
+                                          <li><a href="https://twitter.com/OpenNoobGame" target="_blank">Twitter</a></li>
                                       </ul>
                                   </li>
                                   <li><a href="forum.php">Forum</a></li>
@@ -104,8 +96,6 @@
 
                                     </form>
                                 </ul>
-
-
                             </li>
                         </ul>
                         <?php endif; ?>
