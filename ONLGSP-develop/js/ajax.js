@@ -10,3 +10,9 @@ $('#forumAdmin').click(function(){
     $('#admin').load('ajax/forum.php', function(){
     });
 });
+
+
+$('#moderation').on('click', function(){
+    $('#admin').load('ajax/moderateur.php', function(){
+    });
+});

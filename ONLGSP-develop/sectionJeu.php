@@ -5,17 +5,14 @@ include'includes/connexion.php';
 ?>
 
 <div class="col-md-12 bordureTitreJeux">
-    <h1 class="text-center titreForum">Section Jeux</h1>
-    <div class="row text-center">
-        <a href="forum.php"> Section Discution</a><span>  /  </span>
-        <a href="index.php"> Accueil </a>
-    </div>
     <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-            <div class="bordure"></div>
+        <div class="col-md-3">
+            <h1 class="titreForum">Section Jeux</h1>
+            <a href="index.php"> Accueil</a> /
+            <a href="forum.php"> Section Discussion</a>
         </div>
+        <img src="images/Logo.png" class="col-md-offset-1 col-md-4 img-responsive" alt="Logo ONLGSP">
     </div>
-    <img src="images/Logo.png" class="col-md-offset-4 col-md-4 img-responsive" alt="Logo ONLGSP">
 </div>
 <?php
 // On récupère les 5 derniers billets

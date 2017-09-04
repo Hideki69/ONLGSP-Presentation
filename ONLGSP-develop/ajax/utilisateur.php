@@ -34,6 +34,3 @@ $listeInscrit = $dbh->query($req)->fetchAll();
         </tbody>
     </table>
 </div>
-<?php
-include'../includes/sidebar.php';
-?>
