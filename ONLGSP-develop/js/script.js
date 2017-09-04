@@ -81,7 +81,7 @@ jQuery(function($) {
         });
     }
 
-    $('input').keyup(function(){
+    $('input').on('keyup',function(){
         if($('#titreBillet').val() != '' && $('#contenuBillet').val() != '' && $('#commentaire').val() != '' && $('#contenuBilletJeux').val() != '')
         {
             $('#validBillet').prop("disabled", false); 
@@ -103,8 +103,8 @@ jQuery(function($) {
           $(this).addClass('figurehover');
 
         });
+    
         $('.figure').on('mouseleave',function(){
-
           $(this).parent().parent().css('z-index','1');
           $(this).removeClass('figurehover');
 

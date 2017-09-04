@@ -14,7 +14,7 @@
 </div>
 <div class="col-md-8 col-md-offset-1">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 fondticket">
             <h2 class="text-center"> Ajouter des Billets Discussions </h2>
             <form method="post" action="traitementBillet.php" class="jumbotron">
                 <div class="col-md-offset-3">
@@ -33,7 +33,7 @@
         </div>
 
 
-        <div class="col-md-6">
+        <div class="col-md-6 fondticket">
             <h2 class="text-center"> Ajout de Billet Jeux</h2>
             <form method="post" action="traitementBilletJeux.php" class="jumbotron">
                 <div class="col-md-offset-3">
@@ -51,7 +51,7 @@
             </form>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6 fondticket">
             <h2 class="text-center"> Ajout de Commentaire Discussion</h2>
             <form class="jumbotron" method="post" action="commentaire_post.php?billet=<?= $safe['billet']; ?>">
                 <div class="col-md-offset-3">
@@ -63,7 +63,7 @@
             </form>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6 fondticket">
             <h2 class="text-center"> Ajout de Commentaire Jeux</h2>
             <form class="jumbotron" method="post" action="commentaireJeux_post.php?billet=<?= $safe['billet']; ?>">
                 <div class="col-md-offset-3">

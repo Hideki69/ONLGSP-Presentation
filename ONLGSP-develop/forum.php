@@ -27,12 +27,12 @@ while ($donnees = $req->fetch())
 ?>
 
 <div class="row">
-    <div class="news col-md-offset-2 col-md-8">
+    <div class="news col-md-offset-1 col-md-10">
         <table class="table table-striped">
             <!-- On cells (`td` or `th`) -->
             <tbody>
-                <td class="bordureDroite col-md-4"><p class="text-center sujet">Auteur</p><h3 class="text-center"><br><strong><?php echo htmlspecialchars($donnees['auteur']); ?></strong></h3></td>
-                <td class="bordureDroite1 col-md-4">
+                <td class="bordureDroite col-md-3"><p class="text-center sujet">Auteur</p><h3 class="text-center"><br><strong><?php echo htmlspecialchars($donnees['auteur']); ?></strong></h3></td>
+                <td class="bordureDroite1 col-md-3">
                     <p class="sujet text-center"> Sujet </p>
                     <h4 class="text-center">
                         <?php echo htmlspecialchars($donnees['titre']); ?>
@@ -40,7 +40,7 @@ while ($donnees = $req->fetch())
                     </h4>
                     <a href="commentaire.php?billet=<?php echo $donnees['id_billet']; ?>"><h4>Commentaires</h4></a>
                 </td>
-                <td class="bordureTitreJeux2 bordureDroite1 col-md-4">
+                <td class="bordureTitreJeux2 bordureDroite1 col-md-3">
                     <p class="sujet text-center"> Accroche </p>
                     <p class="text-center">
                         <?php
@@ -65,10 +65,10 @@ $req->closeCursor();
     </div>
 </div>
 
-<div class="col-md-8">
-    <div class="col-md-offset-8">
-        <form method="post" action="traitementBillet.php" class="jumbotron col-md-10">
-            <div class="col-md-offset-3">
+<div class="col-md-8 col-sm-12">
+    <div class="col-md-offset-5 col-md-8 col-sm-12">
+        <form method="post" action="traitementBillet.php" class="jumbotron col-md-12">
+            <div class="col-md-offset-5">
                 <label class="col-md-offset-1" for="titreBillet"> Titre du Billet </label><br>
                 <input type="text" name="titreBillet" id="titreBillet" required><br>
 
