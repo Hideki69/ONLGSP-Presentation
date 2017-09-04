@@ -1,7 +1,7 @@
 <?php
 //script suppCategorie.php
 //Mr Propre (l'id vient de l'url)
-$idUsers = strip_tags($_GET['id']);
+$idUsers = strip_tags($_GET['idUsers']);
 //connexion
 include 'includes/connexion.php';
 //requete
@@ -15,5 +15,5 @@ $params = array(':idUsers' => $idUsers);
 //exécution
 $stmtSupp->execute($params);
 //retour
-header('location: index.php');
+// header('location: index.php');
 ?>

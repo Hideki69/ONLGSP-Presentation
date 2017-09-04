@@ -5,14 +5,14 @@ include 'includes/connexion.php';
 //Mr Propre
 $safe = array_map('strip_tags', $_POST);
 //requete
-$rqModif = "UPDATE users
-						SET pseudo = :pseudo
-						WHERE idUsers = :idUsers";
+$rqModif = "UPDATE categories
+						SET libCategorie = :libCategorie
+						WHERE idCategorie = :idCategorie";
 //preparation
 $stmtModif = $dbh->prepare($rqModif);
 //paramètres
-$params = array(':pseudo' => $safe['pseudo'],
-								':idUsers' => $safe['idUsers']);
+$params = array(':libCategorie' => $safe['libCategorie'],
+								':idCategorie' => $safe['idCategorie']);
 //exécution
 $stmtModif->execute($params);
 //retour

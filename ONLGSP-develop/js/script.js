@@ -4,7 +4,7 @@ jQuery(function($) {
         {
             $('#pseudo').css('borderColor','green');
             $('.iconePseudo').css('color','green');
-        }
+        } 
 
         else{
             $('#pseudo').css('borderColor','red');
@@ -19,7 +19,7 @@ jQuery(function($) {
         }
 
         if( !validateEmail($('#email').val()))
-        {
+        { 
             $('#email').css('borderColor','red');
         }
 
@@ -63,7 +63,7 @@ jQuery(function($) {
     $('#conrfirmPassword').keyup(function(){
         if($('#password').val() != $('#conrfirmPassword').val()){
             $('#conrfirmPassword').css('borderColor','red');
-        }
+        } 
 
         else{
             $('#conrfirmPassword').css('borderColor','green');
@@ -84,19 +84,19 @@ jQuery(function($) {
     $('input').keyup(function(){
         if($('#titreBillet').val() != '' && $('#contenuBillet').val() != '' && $('#commentaire').val() != '' && $('#contenuBilletJeux').val() != '')
         {
-            $('#validBillet').prop("disabled", false);
-            $('#validBilletJeux').prop("disabled", false);
+            $('#validBillet').prop("disabled", false); 
+            $('#validBilletJeux').prop("disabled", false); 
             $('#validForm').prop("disabled", false); // Element(s) are now enabled.
         }
         else
         {
-            $('#validBillet').prop("disabled", true);
-            $('#validBilletJeux').prop("disabled", true);
+            $('#validBillet').prop("disabled", true); 
+            $('#validBilletJeux').prop("disabled", true); 
             $('#validForm').prop("disabled", true); // Element(s) are now enabled.
             event.preventDefault();
         }
     });
-
+    
     $('.figure').on('mouseenter',function(){
 
           $(this).parent().parent().css('z-index','99999');
@@ -109,76 +109,4 @@ jQuery(function($) {
           $(this).removeClass('figurehover');
 
         });
-});
-
-FusionCharts.ready(function () {
-    var salesChart = new FusionCharts({
-        type: 'area2d',
-        renderAt: 'chart-container',
-        width: '400',
-        height: '300',
-        dataFormat: 'json',
-        dataSource: {
-            "chart": {
-                "caption": "Sales of Liquor",
-                "subCaption": "Last week",
-                "xAxisName": "Day",
-                "yAxisName": "Sales (In USD)",
-                "numberPrefix": "$",
-                "paletteColors": "#0075c2",
-                "bgColor": "#ffffff",
-                "showBorder": "0",
-                "showCanvasBorder": "0",
-                "plotBorderAlpha": "10",
-                "usePlotGradientColor": "0",
-                "plotFillAlpha": "50",
-                "showXAxisLine": "1",
-                "axisLineAlpha": "25",
-                "divLineAlpha": "10",
-                "showValues": "1",
-                "showAlternateHGridColor": "0",
-                "captionFontSize": "14",
-                "subcaptionFontSize": "14",
-                "subcaptionFontBold": "0",
-                "toolTipColor": "#ffffff",
-                "toolTipBorderThickness": "0",
-                "toolTipBgColor": "#000000",
-                "toolTipBgAlpha": "80",
-                "toolTipBorderRadius": "2",
-                "toolTipPadding": "5"
-            },
-
-            "data": [
-                {
-                    "label": "Mon",
-                    "value": "4123"
-                },
-                {
-                    "label": "Tue",
-                    "value": "4633"
-                },
-                {
-                    "label": "Wed",
-                    "value": "5507"
-                },
-                {
-                    "label": "Thu",
-                    "value": "4910"
-                },
-                {
-                    "label": "Fri",
-                    "value": "5529"
-                },
-                {
-                    "label": "Sat",
-                    "value": "5803"
-                },
-                {
-                    "label": "Sun",
-                    "value": "6202"
-                }
-            ]
-        }
-    })
-    .render();
 });

@@ -5,17 +5,14 @@ include'includes/connexion.php';
 ?>
 
 <div class="col-md-12 bordureTitreJeux">
-    <h1 class="text-center titreForum">Section discution</h1>
-    <div class="row text-center">
-        <a href="sectionJeu.php"> Section Jeux /</a>
-        <a href="index.php"> Accueil </a>
-    </div>
     <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-            <div class="bordure"></div>
+        <div class="col-md-3">
+            <h1 class="titreForum">Section discution</h1>
+            <a href="index.php"> Accueil</a> /
+            <a href="sectionJeu.php"> Section Jeux</a>
         </div>
+        <img src="images/Logo.png" class="col-md-offset-1 col-md-4 img-responsive" alt="Logo ONLGSP">
     </div>
-    <img src="images/Logo.png" class="col-md-offset-4 col-md-4 img-responsive" alt="Logo ONLGSP">
 </div>
 <?php
 // On récupère les 5 derniers billets
@@ -34,7 +31,7 @@ while ($donnees = $req->fetch())
             <!-- On cells (`td` or `th`) -->
             <tbody>
                 <td class="bordureDroite col-md-4"><p class="text-center sujet">Auteur</p><h3 class="text-center"><br><strong><?php echo htmlspecialchars($donnees['auteur']); ?></strong></h3></td>
-                <td class="col-md-4">
+                <td class="bordureDroite1 col-md-4">
                     <p class="sujet text-center"> Sujet </p>
                     <h4 class="text-center">
                         <?php echo htmlspecialchars($donnees['titre']); ?>
@@ -42,7 +39,7 @@ while ($donnees = $req->fetch())
                     </h4>
                     <a href="commentaire.php?billet=<?php echo $donnees['id_billet']; ?>"><h4>Commentaires</h4></a>
                 </td>
-                <td class="bordureDroite col-md-4">
+                <td class="bordureTitreJeux2 bordureDroite1 col-md-4">
                     <p class="sujet text-center"> Accroche </p>
                     <p class="text-center">
                         <?php
@@ -67,5 +64,23 @@ $req->closeCursor();
     </div>
 </div>
 
+<div class="col-md-8">
+    <div class="col-md-offset-8">
+        <form method="post" action="traitementBillet.php" class="jumbotron col-md-10">
+            <div class="col-md-offset-3">
+                <label class="col-md-offset-1" for="titreBillet"> Titre du Billet </label><br>
+                <input type="text" name="titreBillet" id="titreBillet" required><br>
+
+                <input type="hidden" name="auteurBillet" id="auteurBillet" value="<?= $_SESSION['pseudo'] ?>"><br>
+
+                <label for="contenuBillet"> Ecrivez votre nouveau billet</label><br>
+                <input type="text" name="contenuBillet" id="contenuBillet" required>
+
+                <input type="hidden" id="idUsers" name="idUsers" value="<?= $_SESSION['id'] ?>">
+                <button class="btn btn-submit" type="submit" name="validBillet" id="validBillet" disabled> Envoyez </button>
+            </div>
+        </form>
+    </div>
+</div>
 <?php include'includes/footer.php'; ?>
 <?php include'includes/basPage.php'; ?>

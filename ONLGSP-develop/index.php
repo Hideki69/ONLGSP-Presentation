@@ -5,6 +5,9 @@
 <?php if(isset($_SESSION['auth'])  && ($_SESSION['role'])): ?>
 <?php include'includes/menu.php' ?>
 <div id="admin"></div>
+
+<?php include'includes/sidebar.php'; ?>
+
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/script.js"></script>
@@ -13,23 +16,15 @@
     $(function() {
         $('#admin').load('ajax/utilisateur.php', function(){
 
-        });
-<<<<<<< HEAD
+        }); 
 
-        $('#billetdiscussion').on('click', function(){
-            $('#admin').load('ajax/ajoutBilletDiscussion.php', function(){
+        $('#moderation').on('click', function(){
+            $('#admin').load('ajax/moderation.php', function(){
             });
         });
-
-        $('#billetjeux').on('click', function(){
-            $('#admin').load('ajax/ajoutBilletJeux.php', function(){
-            });
-        });
-=======
         
->>>>>>> 45ea2cd0c8e99af355a1eee0101f0d331e5c642a
+        
     });
-
 </script>
 </body>
 </html>
