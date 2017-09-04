@@ -1,4 +1,4 @@
-<?php 
+<?php
 include'includes/entete.php';
 include'includes/menu.php';
 include'includes/connexion.php';

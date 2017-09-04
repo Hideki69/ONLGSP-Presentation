@@ -22,8 +22,8 @@
                         <div class="collapse navbar-collapse" id="menu">
                             <ul class="nav navbar-nav">
                               <li><a  href="#" id="utilisateur">Liste utilisateur</a></li>
-
                               <li><a href="#" id="forumAdmin">Forum</a></li>
+                              <li><a href="#" id="statAdmin">Stats</a></li>
                             </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="#"><i class="glyphicon glyphicon-user"></i>

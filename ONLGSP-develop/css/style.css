@@ -263,13 +263,14 @@ header{
 
 .titreForum {
     margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     font-family: 'sedgwick_ave_displayregular';
 }
 
 .bordureTitreJeux a{
     font-size: 1.75em;
-    color: #2b3136;
+    color: #36454F;
 }
 
 //////////////////////////////[RESTE]/////////////////////////////////
@@ -366,7 +367,7 @@ figure{
 }
 
 .titreJeu{
-    font-size: 0,2em;
+    font-size: 1.025em;
 }
 
 .listeJeux{
@@ -388,8 +389,8 @@ figcaption{
     background: aliceblue;
     opacity: 0.9;
     width: 100%;
-    /*    height: 35%;*/
-    /*    position: absolute;*/
+/*    height: 35%;*/
+/*    position: absolute;*/
     bottom: 3rem;
 }
 
@@ -433,7 +434,7 @@ footer h4{
 
 /*
 footer h3{
-color: aliceblue;
+    color: aliceblue;
 }
 */
 
@@ -480,18 +481,14 @@ h3 {
 
 .bordureDroite {
     border: 2px solid black;
-    background: linear-gradient(125deg, #5bc0de, #ddd);
+    background: #6E7F80;
 }
 
 .bordureTitreJeux{
     border: 5px solid #536872;
-    background: linear-gradient(240deg, #ddd, #5bc0de);
+    background: linear-gradient(120deg, #6E7F80, #3b3f40);
     margin-bottom: 5rem;
     font-family: 'sedgwick_ave_displayregular';
-}
-
-.bordureTitreJeux2{
-        background: linear-gradient(125deg, #ddd, #6E7F80);
 }
 
 .sujet {
@@ -601,9 +598,7 @@ h3 {
 }
 
 .titreSidebar {
-    margin-bottom: 3rem;
-    color: #d9534f;
-    font-family: 'antonregular';
+    margin-bottom: 5rem;
 }
 
 @keyframes fadeInRight {
@@ -630,6 +625,7 @@ h3 {
 .positionTab {
     margin-top: 5rem;
 }
+<<<<<<< HEAD
 
 .bordureDroite1 {
     border-right: 2px solid black;
@@ -644,3 +640,5 @@ h3 {
     width: 100%;
     height: auto;    
 }
+=======
+>>>>>>> 45ea2cd0c8e99af355a1eee0101f0d331e5c642a
