@@ -16,3 +16,13 @@ $('#moderation').on('click', function(){
     $('#admin').load('ajax/moderateur.php', function(){
     });
 });
+
+$('#ajoutBilletDiscussion').on('click', function(){
+    $('#admin').load('ajax/ajoutBilletDiscussion.php', function(){
+    });
+});
+
+$('#ajoutBilletJeux').on('click', function(){
+    $('#admin').load('ajax/ajoutBilletJeux.php', function(){
+    });
+});
