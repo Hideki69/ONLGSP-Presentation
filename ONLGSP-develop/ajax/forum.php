@@ -3,15 +3,17 @@
  include'../includes/connexion.php';
 
  ?>
- <div class="col-md-12 bordureTitreJeux">
-     <h1 class="text-center titreForum">Forum Administrateur</h1>
-     <div class="row text-center">
-         <a href="sectionJeu.php"> Section Jeux /</a>
-         <a href="index.php"> Accueil </a>
-     </div>
-
-     <img src="images/Logo.png" class="col-md-offset-4 col-md-4 img-responsive" alt="Logo ONLGSP">
- </div>
+<div class="col-md-12 bordureTitreJeux">
+    <img src="images/forum.png" class="img-responsive imgsvg">
+    <div class="row banniereForum">
+        <div class="col-md-3">
+            <h1 class="titreForum">Section Jeux</h1>
+            <a href="index.php"> Accueil</a> /
+            <a href="forum.php"> Section Discussion</a>
+        </div>
+        <img src="images/Logo2.png" class="col-md-offset-1 col-md-4 img-responsive" alt="Logo ONLGSP">
+    </div>
+</div>
  <?php
  // On récupère les 5 derniers billets
  $req = $dbh->query('SELECT id_billet, titre, contenu, auteur, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation_fr FROM billets ORDER BY date_creation DESC LIMIT 0, 5');
@@ -80,5 +82,4 @@
          </form>
      </div>
  </div>
- <?php include'../includes/footer.php'; ?>
  <?php include'../includes/basPage.php'; ?>

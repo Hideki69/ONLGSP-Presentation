@@ -5,6 +5,17 @@ $req = $dbh->query('SELECT id_billet, titre, contenu, auteur, DATE_FORMAT(date_c
 $donnees = $req->fetch();
 
 ?>
+<div class="col-md-12 bordureTitreJeux">
+    <img src="images/forum.png" class="img-responsive imgsvg">
+    <div class="row banniereForum">
+        <div class="col-md-3">
+            <h1 class="titreForum">Section Jeux</h1>
+            <a href="index.php"> Accueil</a> /
+            <a href="forum.php"> Section Discussion</a>
+        </div>
+        <img src="images/Logo2.png" class="col-md-offset-1 col-md-4 img-responsive" alt="Logo ONLGSP">
+    </div>
+</div>
 <div class="col-sm-6 col-sm-offset-3 col-md-6 positionTab">
     <h2 class="text-center">Modération Commentaire</h2>
     <h3 class="titreModeration text-center">Commentaire Section discussion</h3>

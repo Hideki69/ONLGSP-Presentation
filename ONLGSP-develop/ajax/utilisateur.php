@@ -4,7 +4,17 @@ include '../includes/connexion.php';
 $req = "SELECT * FROM view_users";
 $listeInscrit = $dbh->query($req)->fetchAll();
 ?>
-
+<div class="col-md-12 bordureTitreJeux">
+    <img src="images/forum.png" class="img-responsive imgsvg">
+    <div class="row banniereForum">
+        <div class="col-md-3">
+            <h1 class="titreForum">Section Jeux</h1>
+            <a href="index.php"> Accueil</a> /
+            <a href="forum.php"> Section Discussion</a>
+        </div>
+        <img src="images/Logo2.png" class="col-md-offset-1 col-md-4 img-responsive" alt="Logo ONLGSP">
+    </div>
+</div>
 <div class="col-sm-6 col-sm-offset-3 col-md-6 positionTab">
     <!-- affichage de la liste des produits -->
     <table class="table robert table-striped">
