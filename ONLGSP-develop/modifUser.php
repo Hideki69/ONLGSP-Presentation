@@ -1,20 +1,23 @@
 <?php
-//script modifCategorie.php
-session_start(); //toujours en haut
-include 'includes/connexion.php';
+//script modifUsers.php
+
+
 //Mr Propre
 $safe = array_map('strip_tags', $_POST);
-//requete
-$rqModif = "UPDATE categories
-						SET libCategorie = :libCategorie
-						WHERE idCategorie = :idCategorie";
+//connexion
+include 'includes/connexion.php';
+//requete modif nom
+$rqModif = "UPDATE users
+						SET pseudo = :pseudo, email = :email
+						WHERE idUsers = :idUsers";
 //preparation
 $stmtModif = $dbh->prepare($rqModif);
-//paramètres
-$params = array(':libCategorie' => $safe['libCategorie'],
-								':idCategorie' => $safe['idCategorie']);
+//parametres
+$params = array(':pseudo' => $safe['pseudo'],
+								':email' => $safe['email'],
+								':idUsers' => $safe['idUsers']);
 //exécution
 $stmtModif->execute($params);
 //retour
-// header('location: index.php');
+header('location:index.php');
 ?>

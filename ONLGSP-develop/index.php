@@ -16,14 +16,26 @@
     $(function() {
         $('#admin').load('ajax/utilisateur.php', function(){
 
-        }); 
+        });
 
-        $('#moderation').on('click', function(){
-            $('#admin').load('ajax/moderation.php', function(){
+        $('#ajoutBillet').on('click',function(){
+            $('#admin').load('ajax/ajoutBillet.php', function(){
+
             });
         });
-        
-        
+
+        $('#moderation').on('click',function(){
+            $('#admin').load('ajax/moderation.php', function(){
+
+            });
+        });
+
+        $('#utilisateur').on('click',function(){
+            $('#admin').load('ajax/utilisateur.php', function(){
+
+            });
+        });
+
     });
 </script>
 </body>
