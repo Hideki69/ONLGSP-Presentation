@@ -53,13 +53,10 @@ include'includes/connexion.php';
                     </tr>
                 </tbody>
             </table>
-            <div class="col-md-offset-9 col-md-2">
+            <div class="col-md-offset-9 col-md-2 paypal1">
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                     <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="hosted_button_id" value="BGSRQX9BMMYPN">
-                    <table>
-                        <tr><td class="text-center"><input type="hidden" name="on0" value="Forfait Gratuit">Forfait à vie</td></tr><tr><td><input type="text" name="os0" maxlength="200"></td></tr>
-                    </table>
+                    <input type="hidden" name="hosted_button_id" value="KKRTVY5X72BQU">
                     <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
                     <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
                 </form>

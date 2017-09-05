@@ -53,7 +53,7 @@ include'includes/connexion.php';
                     </tr>
                 </tbody>
             </table>
-            <div class="col-md-offset-9 col-md-2">
+            <div class="col-md-offset-9 col-md-2 paypal">
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value="BGSRQX9BMMYPN">

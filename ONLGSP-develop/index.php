@@ -14,6 +14,7 @@
 <?php include'includes/basPage.php' ?>
 
 
+
 <!-- menu si connecté -->
 <?php elseif(isset($_SESSION['auth'])): ?>
 <?php include'includes/menu.php' ?>

@@ -96,17 +96,18 @@ jQuery(function($) {
             event.preventDefault();
         }
     });
-    
+
     $('.figure').on('mouseenter',function(){
 
-          $(this).parent().parent().css('z-index','99999');
-          $(this).addClass('figurehover');
+        $(this).parent().parent().css('z-index','99999');
+        $(this).addClass('figurehover');
 
-        });
-    
-        $('.figure').on('mouseleave',function(){
-          $(this).parent().parent().css('z-index','1');
-          $(this).removeClass('figurehover');
+    });
 
-        });
+    $('.figure').on('mouseleave',function(){
+        $(this).parent().parent().css('z-index','1');
+        $(this).removeClass('figurehover');
+
+    });
+
 });

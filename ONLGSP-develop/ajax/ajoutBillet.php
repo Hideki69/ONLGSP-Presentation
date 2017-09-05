@@ -19,7 +19,7 @@
             <form method="post" action="traitementBillet.php" class="jumbotron">
                 <div class="col-md-offset-3">
                     <label class="text-center" for="titreBillet"> Titre du Billet </label><br>
-                    <input type="text" name="titreBillet" id="titreBillet" required><br>
+                    <input type="text" class="titreBillet" name="titreBillet" id="titreBillet" required><br>
 
                     <input type="hidden" name="auteurBillet" id="auteurBillet" value="<?= $_SESSION['pseudo'] ?>"><br>
 
@@ -57,7 +57,7 @@
                 <div class="col-md-offset-3">
                     <input type="hidden" name="id_billet" value="<?= $safe['billet'] ?>">
                     <input type="hidden" name="auteur" id="auteur" value="<?= $_SESSION['pseudo'] ?>">
-                    <input type="text" name="commentaire" id="commentaire" placeholder="Tapez Votre Commentaire .. ">
+                    <input type="text" class="commentaireDiscussion" name="commentaire" id="commentaire" placeholder="Tapez Votre Commentaire .. ">
                     <button  class="btn btn-submit" type="submit" name="validForm" id="validForm" disabled> Envoyez </button>
                 </div> 
             </form>
@@ -69,8 +69,8 @@
                 <div class="col-md-offset-3">
                     <input type="hidden" name="id_billetJeux" value="<?= $safe['billet'] ?>">
                     <input type="hidden" name="auteur" id="auteur" value="<?= $_SESSION['pseudo'] ?>">
-                    <input type="text" name="commentaire" id="commentaire" placeholder="Tapez Votre Commentaire .. ">
-                    <button  class="btn btn-submit" type="submit" name="validForm" id="validForm" disabled> Envoyez </button>
+                    <input type="text" class="commentaireJeux" name="commentaire" id="commentaire" placeholder="Tapez Votre Commentaire .. ">
+                    <button  class="btn btn-submit validForm" type="submit" name="validForm" id="validForm" disabled> Envoyez </button>
                 </div>
             </form>
         </div>

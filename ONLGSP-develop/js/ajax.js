@@ -1,7 +1,4 @@
-
-
 // Affiche page quand on clique sur le lien
-
 $('#admin').load('ajax/utilisateur.php', function(){
 });
 
@@ -27,18 +24,43 @@ $('#moderation').on('click', function(){
 
 $('#ajoutBillet').on('click', function(){
     $('#admin').load('ajax/ajoutBillet.php', function(){
-        if($('#titreBillet').val() != '' && $('#contenuBillet').val() != '' && $('#commentaire').val() != '' && $('#contenuBilletJeux').val() != '')
-        {
-            $('#validBillet').prop("disabled", false); 
-            $('#validBilletJeux').prop("disabled", false); 
-            $('#validForm').prop("disabled", false); // Element(s) are now enabled.
-        }
-        else
-        {
-            $('#validBillet').prop("disabled", true); 
-            $('#validBilletJeux').prop("disabled", true); 
-            $('#validForm').prop("disabled", true); // Element(s) are now enabled.
-            event.preventDefault();
-        }
+        $('input').on('keyup',function(){
+            if($('.titreBillet').val() != '' && $('#contenuBillet').val() != '')
+            {
+                $('#validBillet').prop("disabled", false); 
+            }
+            else
+            {
+                $('#validBillet').prop("disabled", true); 
+                event.preventDefault();
+            }
+
+            if($('.commentaireJeux').val() != ''){
+                $('.validForm').prop("disabled", false);
+            }
+
+            else{
+                $('.validForm').prop("disabled", true); 
+                event.preventDefault();
+            }
+
+            if($('.commentaireDiscussion').val() != ''){
+                $('#validForm').prop("disabled", false);
+            }
+
+            else{
+                $('#validForm').prop("disabled", true); 
+                event.preventDefault();
+            }
+
+            if($('#contenuBilletJeux').val() != '' && $('#titreBilletJeux').val() != '' ){
+                $('#validBilletJeux').prop("disabled", false);
+            }
+
+            else{
+                $('#validBilletJeux').prop("disabled", true); 
+                event.preventDefault();
+            }
+        });
     });
 });
