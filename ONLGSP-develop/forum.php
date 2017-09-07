@@ -68,7 +68,7 @@ $req->closeCursor();
 <div class="col-md-8 col-sm-12">
     <div class="col-md-offset-5 col-md-8 col-sm-12">
         <form method="post" action="traitementBillet.php" class="jumbotron col-md-12">
-            <div class="col-md-offset-5">
+            <div class="col-md-offset-4">
                 <label class="col-md-offset-1" for="titreBillet"> Titre du Billet </label><br>
                 <input type="text" name="titreBillet" id="titreBillet" required><br>
 

@@ -4,4 +4,3 @@
         <img class="col-md-6 col-md-offset-3 img-responsive"  src="images/panel.png">
     </div>
 </div>
-</main>

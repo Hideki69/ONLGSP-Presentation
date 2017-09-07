@@ -7,6 +7,15 @@
 }
 
 @font-face {
+    font-family: 'cracked_coderegular';
+    src: url('cracked_code-webfont.woff2') format('woff2'),
+         url('cracked_code-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
     font-family: 'gloria_hallelujahregular';
     src: url('gloriahallelujah-webfont.woff2') format('woff2'),
         url('gloriahallelujah-webfont.woff') format('woff');
@@ -48,6 +57,18 @@ html,body, main{
     height: auto;
 }
 
+body {
+  background-color: 	#f2f2f2;
+  background-image: url("../images/gamer.jpg");
+  background-size: cover;
+  background-attachment:fixed;
+}
+
+p {
+  font-size: 2rem;
+  font-family: 'roboto_monobold';
+}
+
 a {
     text-decoration: none;
 }
@@ -63,23 +84,40 @@ ul li{
 
 .titreSlider{
     color: dodgerblue;
+    text-shadow: 0px 0px 6px #FFF, 0px 0px 6px #FFF, 0px 0px 6px #FFF, 0px 0px 6px #FFF, 0px 0px 6px #FFF, 0px 0px 6px #FFF, 0px 0px 6px #FFF, 0px 0px 6px #FFF, 0px 0px 6px #FFF, 0px 0px 6px #FFF, 0px 0px 6px #FFF, 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255);
 }
 
+.infoSlider {
+  text-shadow: 0px 0px 6px black, 0px 0px 6px black, 0px 0px 6px black, 0px 0px 6px black, 0px 0px 6px black, 0px 0px 6px black, 0px 0px 6px black, 0px 0px 6px black, 0px 0px 6px black, 0px 0px 6px black, 0px 0px 6px black, 0px 0px 6px black, 0px 0px 6px black, 0px 0px 6px black, 0px 0px 6px black;
+
+}
 .bouttonSlider {
     width: 15rem;
-    height: 8rem;
-    border-radius: 45%;
+    border-radius: 30px;
+}
+
+.bouttonSlider p {
+    margin: 0;
+    font-family: 'gloria_hallelujahregular';
+    font-size: 1.5rem;
 }
 
 .carousel-indicators li{
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 50%;
     color: aliceblue;
     background: aliceblue;
     opacity: 0.5;
 }
 
+.carousel-indicators .active {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  background-color: #fff;
+  opacity: 1;
+}
 
 .carousel-caption{
     position: absolute;
@@ -87,14 +125,14 @@ ul li{
     left: 0;
     right: 0;
 }
-@media (min-width: 320px) and (max-width:1024px) 
+@media (min-width: 320px) and (max-width:1024px)
 {
     .banniereForum{
         display: block;
     }
 }
 
-@media (min-width: 768px) and (max-width:1022px) 
+@media (min-width: 768px) and (max-width:1022px)
 {
     .banniereForum{
         margin-bottom: 5rem;
@@ -102,7 +140,7 @@ ul li{
 }
 
 
-@media (min-width: 1023px) and (max-width:1100px) 
+@media (min-width: 1023px) and (max-width:1100px)
 {
     .banniereForum{
         margin-bottom: 5rem;
@@ -155,6 +193,7 @@ ul li{
 
 .forfait{
     margin-top: 10rem;
+
 }
 
 .etendre {
@@ -162,7 +201,12 @@ ul li{
 }
 
 .thumbnail{
-    background: #708090;
+    background-color: #708090;
+    box-shadow: inset 0px 0px 20px 5px black;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#cfcfcf, Direction=NaN, Strength=15);
+    border-radius: 10px;
+    border: solid 1px;
+    padding-bottom: 2rem;
 }
 
 .bordure {
@@ -298,7 +342,11 @@ header{
     color: #2b3136;
 }
 
-//////////////////////////////[RESTE]/////////////////////////////////
+.container {
+  width: 75%;
+}
+
+/*//////////////////////////////[RESTE]/////////////////////////////////*/
 
 p #forfait-p {
     color: aliceblue;
@@ -307,7 +355,7 @@ p #forfait-p {
 #btnInscription {
     text-align: center;
 }
-///////////////////////////////[MENU]///////////////////////////////
+/*///////////////////////////////[MENU]///////////////////////////////*/
 
 .navbar-default {
     background-color: #36454f;
@@ -374,10 +422,10 @@ p #forfait-p {
 }
 
 
-///////////////////////////////[NEWS]///////////////////////////////
+/*///////////////////////////////[NEWS]///////////////////////////////*/
 
 
-///////////////////////////////[LISTE DE JEUX]///////////////////////////////
+/*///////////////////////////////[LISTE DE JEUX]///////////////////////////////*/
 
 figure{
     z-index: 1500;
@@ -391,8 +439,10 @@ figure{
     transform: scale(1.75);
 }
 
-.titreJeu{
-    font-size: 0,2em;
+.titreJeu {
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
 }
 
 .listeJeux{
@@ -420,8 +470,7 @@ figcaption{
 }
 
 
-///////////////////////////////[FOOTER]///////////////////////////////
-///////////////////////////////[FOOTER]///////////////////////////////
+/*///////////////////////////////[FOOTER]///////////////////////////////*/
 
 footer a {
     color: aliceblue;
@@ -456,12 +505,6 @@ a:hover {
 footer h4{
     color: aliceblue;
 }
-
-/*
-footer h3{
-color: aliceblue;
-}
-*/
 
 .modal-body h2{
     color: red;
@@ -556,6 +599,10 @@ h3 {
 
 .styleTab {
     color: aliceblue;
+}
+
+.styleTab h3 {
+    color: red;
 }
 
 .margeTab {

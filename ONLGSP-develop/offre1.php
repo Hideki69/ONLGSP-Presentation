@@ -1,10 +1,10 @@
-<?php 
+<?php
 include'includes/entete.php';
 include'includes/menu.php';
 include'includes/connexion.php';
 ?>
 
-<h1 class="titreForfait1 text-center"> Forfait Gratuit </h1>
+<h1 class="titreForfait1 text-center">Forfait Gratuit </h1>
 
 <?php if(isset($_SESSION['auth'])): ?>
 <div id="ancreForfait" class="col-md-12 text-center">
@@ -14,7 +14,7 @@ include'includes/connexion.php';
             <table class="col-xs-4  table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th class="text-center">Type de Forfaits</th>
+                        <th class="text-center">Types de Forfaits</th>
                         <th class="text-center">Free</th>
                         <th class="text-center">Prémium Annuel</th>
                         <th class="text-center">Premium A vie</th>
@@ -70,7 +70,7 @@ include'includes/connexion.php';
 
 <?php else: ?>
 
-<h2 class="titreNoConnect text-center"> Vous devez vous inscrire et/ou vous connectez avant de pouvoir accéder au module d\'achat de votre forfait gratuit ! </h2>
+<h2 class="titreNoConnect text-center"> Vous devez vous inscrire et/ou vous connecter avant de pouvoir accéder au module d'achat de votre forfait gratuit ! </h2>
 
 <form class="formNoConnect col-md-offset-3 col-md-6" method="post" action="login.php">
     <div class="input">
@@ -88,7 +88,7 @@ include'includes/connexion.php';
 <?php endif; ?>
 
 
-<?php 
+<?php
 include'includes/footer.php';
 include'includes/basPage.php';
 ?>

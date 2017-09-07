@@ -6,25 +6,30 @@
                 <div class="item active">
                     <img class="img-responsive imgSlide" src="images/Ark.jpg" alt="Ark Combat Evolved">
                     <div class="carousel-caption">
+
                         <h2 class="titreSlider">Ark Combat Evolved</h2>
-                        <p> Un jeu de survie immersif où votre instinct sera mise à rude épreuve</p>
-                        <button class="btn-info bouttonSlider" type="submit">En Savoir Plus</button>
+                        <p class="infoSlider"> Un jeu de survie immersif où votre instinct sera mise à rude épreuve</p>
+                        <button class="btn-info btn btn-rounded btn-shadow btn-lg bouttonSlider" type="submit"><p>En Savoir Plus</p></button>
                     </div>
                 </div>
                 <div class="item">
                     <img class="img-responsive imgSlide" src="images/Arma.jpg" alt="Arma 3">
                     <div class="carousel-caption">
+
                         <h2 class="titreSlider">Arma 3</h2>
-                        <p> Un jeu de survie immersif où votre instinct sera mise à rude épreuve</p>
-                        <button class="btn-info bouttonSlider" type="submit">En Savoir Plus</button>
+                        <p class="infoSlider"> Un jeu de survie immersif où votre instinct sera mise à rude épreuve</p>
+                        <button class="btn-info btn btn-rounded btn-shadow btn-lg bouttonSlider" type="submit"><p>En Savoir Plus</p></button>
                     </div>
                 </div>
                 <div class="item">
+
                     <img class="img-responsive imgSlide" src="images/counter.jpg" alt="Counter Strike">
                     <div class="carousel-caption">
+
+
                         <h2 class="titreSlider">Counter Strike</h2>
-                        <p> Un jeu de survie immersif où votre instinct sera mise à rude épreuve</p>
-                        <button class="btn-info bouttonSlider" type="submit">En Savoir Plus</button>
+                        <p class="infoSlider"> Un jeu de survie immersif où votre instinct sera mise à rude épreuve</p></figcaption>
+                        <button class="btn-info btn btn-rounded btn-shadow btn-lg bouttonSlider" type="submit"><p>En Savoir Plus</p></button>
                     </div>
                 </div>
             </div>

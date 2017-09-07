@@ -30,7 +30,7 @@
                 <li>Gerald Poncet</li>
                 <li>Nicolas Lidon</li>
                 <li>Kervan Mazuy</li>
-                <li>Développeur/ Intégrateur Web passioné de jeux vidéo</li>
+                <li>Développeur/ Intégrateur Web passionnés de jeux vidéo</li>
             </ul>
         </div>
 
